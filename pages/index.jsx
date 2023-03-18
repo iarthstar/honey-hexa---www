@@ -14,10 +14,10 @@ const PageContainer = ({ children, className, ...rest }) => (
 
 const Page = ({ children, className, ...rest }) => (
   <div className="relative">
-    <div {...rest} className={`bg-black text-white ${className}`}>
+    <div className="w-full h-full absolute top-0 z-0 opacity-10 bg-[url('/noise.png')]"></div>
+    <div {...rest} className={`z-1 bg-black text-white ${className}`}>
       {children}
     </div>
-    <div className="w-full h-full absolute top-0 z-0 opacity-10 bg-[url('/noise.png')]"></div>
   </div>
 );
 
