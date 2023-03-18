@@ -4,24 +4,44 @@ const rubik = Rubik({ subsets: ["latin"] });
 const unbounded = Unbounded({ subsets: ["latin"] });
 
 const PageContainer = ({ children, className, ...rest }) => (
-  <div {...rest} className={`max-w-7xl m-auto ${className}`}>
+  <div
+    {...rest}
+    className={`max-w-7xl m-auto px-4 break-words ${rubik.className} ${className}`}
+  >
     {children}
   </div>
 );
 
 const Page = ({ children, className, ...rest }) => (
-  <div {...rest} className={`bg-black text-white ${className}`}>
-    {children}
+  <div className="relative">
+    <div {...rest} className={`bg-black text-white ${className}`}>
+      {children}
+    </div>
+    <div className="w-full h-full absolute top-0 z-0 opacity-10 bg-[url('/noise.png')]"></div>
   </div>
 );
 
 const Logo = () => (
-  <h3 className="text-xl font-bold">
+  <h3 className="text-lg md:text-3xl font-bold text-gradient">
     <span className={unbounded.className}>HONEY HEXA</span>
   </h3>
 );
 
-const TAGS = ["ONE", "TWO", "THREE", "FOUR"];
+const SectionHeading = ({ heading }) => (
+  <Section className="border-r py-32 md:py-56 ">
+    <h3 className="text-4xl md:text-7xl text-gradient">
+      <span className={unbounded.className}>{heading}</span>
+    </h3>
+  </Section>
+);
+
+const Section = ({ children, className, ...rest }) => (
+  <div {...rest} className={`px-4 md:px-10 ${className}`}>
+    {children}
+  </div>
+);
+
+const TAGS = ["Logo", "Design System", "Print", "Assets"];
 
 const SERVICES = [
   { serviceName: "Branding & Identity", tags: TAGS },
@@ -37,74 +57,96 @@ const WORKS = [
   { workName: "AJK Masala", tags: TAGS },
 ];
 
+const Book = ({ children = "BOOK A CALL", className, ...rest }) => (
+  <button
+    {...rest}
+    onClick={() =>
+      window.open("https://cal.com/honeyhexa/15min?duration=15", "_blank")
+    }
+    className={`overflow-hidden relative py-1 px-3 md:py-2 md:px-6 border text-sm md:text-lg font-medium text-gradient ${unbounded.className} ${className}`}
+  >
+    {children}
+    <div className="absolute top-0 -inset-full h-full w-full z-5 block transform -skew-x-[33deg] bg-gradient-to-r from-transparent to-white opacity-40 animate-shine" />
+  </button>
+);
+
 export default function Home() {
   return (
     <Page>
       <header className="z-10 sticky top-0 backdrop-blur-md border-b">
-        <PageContainer className="h-24 flex flex-row items-center justify-between">
+        <PageContainer className="h-16 md:h-24 flex flex-row items-center justify-between">
           {/* HEADER SECTION */}
           <Logo />
-          <div>Book a call</div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
         </PageContainer>
       </header>
 
       <PageContainer>
         <main className={rubik.className}>
           {/* HERO SECTION */}
-          <div className="text-center border-l pb-20">
-            <h1 className="text-8xl py-32 font-bold">
-              <span
-                className={unbounded.className}
-                style={{
-                  background:
-                    "linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.38)) text",
-                }}
-              >
-                Your Partner in <br />
-                AI-Enhanced Solutions
+          <Section className="border-l py-32 md:py-56">
+            <h1 className="text-4xl md:text-7xl text-gradient">
+              <span className={unbounded.className}>
+                WE TURN YOUR IDEAS INTO DIGITAL PRODUCTS
               </span>
             </h1>
-            <h2 className="text-xl">
-              Unleash the Power of Your Brand, Improve your online presence and
-              customer experience with us
+            <h2 className="text-md md:text-xl mt-12 md:mt-24">
+              Unleash the Power of Your Brand,
+              <br />
+              Improve your online presence and customer experience with us
             </h2>
-            <button className="mt-44">SCROLL DOWN</button>
-          </div>
+            <Book className="mt-4 md:mt-8" />
+          </Section>
 
           {/* ABOUT SECTION */}
-          <div className="border p-56 text-center">
-            <h3 className="text-6xl">
+          <Section className="border py-16 md:py-32 ">
+            <h3 className="text-4xl md:text-4xl text-gradient">
               <span className={unbounded.className}>
                 Elevate Your Digital Game with Honey Hexa&apos;s Cutting-Edge
                 Strategies
               </span>
             </h3>
-            <p className="text-xl mt-20">
+            <p className="text-xl mt-12">
               <span className={rubik.className}>
                 We aim to provide you comprehensive suite of services to help
                 your businesses build, maintain, and grow their online presence
                 and brand identity.
               </span>
             </p>
-          </div>
+          </Section>
 
           {/* SERVICES SECTION */}
-          <div className="border-r p-56 text-center">
-            <h3 className="text-6xl">
-              <span className={unbounded.className}>Our Services</span>
-            </h3>
-          </div>
+          <SectionHeading heading="Our Services" />
           <div className="border">
             <ol>
               {SERVICES.map((o, i) => (
-                <li className="p-16 border-b" key={o.serviceName}>
-                  <h4 className="text-4xl">
-                    <span className="text-2xl">0{i + 1}</span> &nbsp;{" "}
+                <li
+                  className="px-4 py-16 md:px-16 border-b"
+                  key={o.serviceName}
+                >
+                  <h4 className="text-4xl text-gradient">
+                    {/* <span className="text-2xl">0{i + 1}</span> &nbsp;{" "} */}
                     <span className={unbounded.className}>{o.serviceName}</span>
                   </h4>
-                  <ul className="flex flex-row gap-4 mt-10">
+                  <ul className="flex flex-wrap gap-4 mt-4 md:mt-10">
                     {o.tags.map((t) => (
-                      <li key={t} className="py-4 px-8 border">
+                      <li
+                        key={t}
+                        className="text-md md:text-lg py-1 px-3 md:py-4 md:px-8 border"
+                      >
                         {t}
                       </li>
                     ))}
@@ -115,26 +157,28 @@ export default function Home() {
           </div>
 
           {/* WORK SECTION */}
-          <div className="border-r p-56 text-center">
-            <h3 className="text-6xl">
-              <span className={unbounded.className}>Our Work</span>
-            </h3>
-          </div>
-          <div className="border">
+          <SectionHeading heading="Our Work" />
+          <div className="border p-4 md:p-24 flex flex-col gap-y-4 md:gap-y-24">
             {WORKS.map((w) => (
               <div
                 key={w.workName}
-                className={`${unbounded.className} mx-32 my-64 relative flex overflow-x-hidden`}
+                className={`${unbounded.className} h-96 flex items-center justify-center overflow-x-hidden bg-cover bg-[url('https://images.unsplash.com/photo-1677443030437-93c9f5e08ae6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3432&q=80')]`}
               >
-                <div className="flex flex-row animate-marquee whitespace-nowrap text-6xl">
-                  {[...Array(10).keys()].map((k) => (
-                    <div key={k}>&nbsp;• VIEW CASE</div>
-                  ))}
-                </div>
-                <div className="absolute top-0 flex flex-row animate-marquee2 whitespace-nowrap text-6xl">
-                  {[...Array(10).keys()].map((k) => (
-                    <div key={k}>&nbsp;• VIEW CASE</div>
-                  ))}
+                <div className="relative">
+                  <div className="flex flex-row animate-marquee whitespace-nowrap text-6xl">
+                    {[...Array(10).keys()].map((k) => (
+                      <div key={k} className="text-gradient">
+                        &nbsp;&nbsp;•&nbsp;&nbsp;VIEW CASE
+                      </div>
+                    ))}
+                  </div>
+                  <div className="absolute top-0 flex flex-row animate-marquee2 whitespace-nowrap text-6xl">
+                    {[...Array(10).keys()].map((k) => (
+                      <div key={k} className="text-gradient">
+                        &nbsp;&nbsp;•&nbsp;&nbsp;VIEW CASE
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
@@ -144,25 +188,55 @@ export default function Home() {
 
       {/* FOOTER SECTION */}
       <PageContainer>
-        <div className="border-r p-56 text-center">
-          <h3 className="text-6xl">
-            <span className={unbounded.className}>Let&apos;s connect</span>
-          </h3>
-        </div>
+        <SectionHeading
+          heading={
+            <div>
+              Let&apos;s Connect
+              <br />
+              <Book />
+            </div>
+          }
+        />
       </PageContainer>
-      <footer>
-        <PageContainer className="flex flex-row justify-between border-t h-56 items-center">
+      <footer className="border-t py-4 md:py-10">
+        <PageContainer className="flex flex-col md:flex-row justify-between h-56">
           <div>
             <Logo />
           </div>
           <ul className="flex flex-row gap-8">
-            <li>Twitter</li>
+            <li>
+              Twitter{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                />
+              </svg>
+            </li>
             <li>Instagram</li>
             <li>Dribbble</li>
           </ul>
-          <div>
-            Made with <span className="text-red-500 text-xl">❤</span> by Girls
-            in Ahmedabad
+          <div className="flex flex-row">
+            Made with&nbsp;
+            <span className="text-red-500 text-xl">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-6 h-6"
+              >
+                <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+              </svg>
+            </span>
+            &nbsp; by Girls in Ahmedabad
           </div>
         </PageContainer>
       </footer>

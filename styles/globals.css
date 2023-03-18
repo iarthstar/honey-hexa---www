@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: rgb(0 0 0 / 56%) 0px 3px 12px;
+  }
+
+  .text-gradient {
+    background: linear-gradient(
+      to right bottom,
+      rgb(255, 255, 255) 30%,
+      rgba(255, 255, 255, 0.38)
+    );
+    background-clip: text;
+    color: transparent;
+  }
+
+  .button-shiny {
+    transition: transform 500ms ease-out;
+    overflow: hidden;
+  }
+
+  .button-shiny::before {
+    content: "";
+    background: rgba(white, 0.4);
+    width: 60%;
+    height: 100%;
+    top: 0%;
+    left: -125%;
+    transform: skew(45deg);
+    position: absolute;
+    transition: left 500ms ease-out;
+  }
+
+  .button-shiny:hover {
+    transform: translateY(-25%);
+  }
+
+  .button-shiny:hover::before {
+    left: 150%;
+  }
+}
