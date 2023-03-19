@@ -5,6 +5,7 @@ import {
   FooterSection,
 } from "@/components/misc";
 import { Page } from "@/components/page";
+import { ABOUT_PROPS } from "@/content/about";
 import { Rubik } from "next/font/google";
 
 const rubik = Rubik({ subsets: ["latin"] });
@@ -14,8 +15,7 @@ export default function Home() {
     <Page className={rubik.className}>
       <Header />
       <main className={rubik.className}>
-        <AboutSection />
-          
+        <AboutSection {...ABOUT_PROPS} />
       </main>
       <FooterSection />
       <Footer />

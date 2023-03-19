@@ -111,35 +111,6 @@ export const Section = ({ children, className, ...rest }) => (
   </div>
 );
 
-export const TAGS = ["Logo", "Design System", "Print", "Assets"];
-
-export const SERVICES = [
-  { serviceName: "Branding & Identity", tags: TAGS },
-  { serviceName: "Web Development", tags: TAGS },
-  { serviceName: "Search Engine Optimisation", tags: TAGS },
-  { serviceName: "Content Creation", tags: TAGS },
-];
-
-export const WORKS = [
-  { workName: "Kuber Creations", tags: TAGS },
-  { workName: "Netra Constructions", tags: TAGS },
-  { workName: "Harshid Engravers", tags: TAGS },
-  { workName: "AJK Masala", tags: TAGS },
-];
-
-export const NAV_LINKS = [
-  { label: "Services", href: "/services" },
-  { label: "Work", href: "/work" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
-];
-
-export const SOCIAL_LINKS = [
-  { label: <ICON_TWITTER />, href: "https://twitter.com/honeyhexa" },
-  { label: <ICON_DRIBBBLE />, href: "https://dribbble.com/honeyhexa" },
-  { label: <ICON_INSTAGRAM />, href: "https://instagram.com/honeyhexa" },
-];
-
 export const Book = ({ children = "BOOK A CALL", className, ...rest }) => (
   <button
     {...rest}
@@ -173,53 +144,44 @@ export const Button = ({ href, children, className, ...rest }) => (
   </button>
 );
 
-export const HeroSection = () => (
+export const HeroSection = ({ title, desc, cta }) => (
   <PageContainer>
     {/* HERO SECTION */}
     <div className="border-white py-32 md:py-56">
       <TextShadowGradient className="translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
         <h1 className="text-4xl md:text-7xl">
-          <span className={`${unbounded.className}`}>
-            WE TURN YOUR IDEAS INTO DIGITAL PRODUCTS
-          </span>
+          <span className={`${unbounded.className}`}>{title}</span>
         </h1>
       </TextShadowGradient>
       <h2 className="translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:400ms] text-md md:text-xl mt-12 md:mt-24">
-        Unleash the Power of Your Brand,
-        <br />
-        Improve your online presence and customer experience with us
+        {desc}
       </h2>
-      <Book className="mt-4 md:mt-8 translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:500ms]" />
+      <Book className="mt-4 md:mt-8 translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:500ms]">
+        {cta}
+      </Book>
     </div>
   </PageContainer>
 );
 
-export const AboutSection = () => (
+export const AboutSection = ({ title, desc }) => (
   <PageContainer>
     <Section className="backdrop-blur-xl bg-black border-white border py-16 md:py-32 ">
       <h3 className="text-4xl md:text-4xl text-gradient">
-        <span className={unbounded.className}>
-          Elevate Your Digital Game with Honey Hexa&apos;s Cutting-Edge
-          Strategies
-        </span>
+        <span className={unbounded.className}>{title}</span>
       </h3>
       <p className="text-xl mt-12">
-        <span className={rubik.className}>
-          We aim to provide you comprehensive suite of services to help your
-          businesses build, maintain, and grow their online presence and brand
-          identity.
-        </span>
+        <span className={rubik.className}>{desc}</span>
       </p>
     </Section>
   </PageContainer>
 );
 
-export const ServicesSection = () => (
+export const ServicesSection = ({ list, title }) => (
   <PageContainer>
-    <SectionHeading heading="Our Services" />
+    <SectionHeading heading={title} />
     <div className="border-white border">
       <ol>
-        {SERVICES.map((o, i) => (
+        {list.map((o, i) => (
           <li
             className="backdrop-blur-xl bg-black px-4 py-16 md:px-16 border-white border-b"
             key={o.serviceName}
@@ -245,11 +207,11 @@ export const ServicesSection = () => (
   </PageContainer>
 );
 
-export const WorkSection = () => (
+export const WorkSection = ({ title, list }) => (
   <PageContainer>
-    <SectionHeading heading="Our Work" />
+    <SectionHeading heading={title} />
     <div className="backdrop-blur-xl bg-black border-white border p-4 md:p-24 flex flex-col gap-y-4 md:gap-y-24">
-      {WORKS.map((w) => (
+      {list.map((w) => (
         <div
           key={w.workName}
           className={`${unbounded.className} h-96 flex items-center justify-center overflow-x-hidden bg-cover bg-[url('https://images.unsplash.com/photo-1677443030437-93c9f5e08ae6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3432&q=80')]`}

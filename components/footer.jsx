@@ -1,7 +1,21 @@
 import Link from "next/link";
 import React from "react";
-import { Button, Heart, Logo, NAV_LINKS, SOCIAL_LINKS } from "./misc";
+import { NAV_LINKS, SOCIAL_LINKS } from "@/content/misc";
+import {
+  Button,
+  Heart,
+  ICON_DRIBBBLE,
+  ICON_INSTAGRAM,
+  ICON_TWITTER,
+  Logo,
+} from "@/components/misc";
 import { PageContainer } from "./page-container";
+
+const LOGO_MAP = {
+  TWITTER: <ICON_TWITTER />,
+  DRIBBBLE: <ICON_DRIBBBLE />,
+  INSTAGRAM: <ICON_INSTAGRAM />,
+};
 
 export function Footer() {
   return (
@@ -28,7 +42,7 @@ export function Footer() {
                   className="flex justify-center items-center h-12 w-12"
                   href={o.href}
                 >
-                  {o.label}
+                  {LOGO_MAP[o.label]}
                 </Button>
                 <a href={o.href} className="hidden" />
               </li>
