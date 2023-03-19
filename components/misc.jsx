@@ -147,7 +147,7 @@ export const Button = ({ href, children, className, ...rest }) => (
 export const HeroSection = ({ title, desc, cta }) => (
   <PageContainer>
     {/* HERO SECTION */}
-    <div className="border-white py-32 md:py-56">
+    <div className="border-white pt-48 pb-24 md:pt-72 md:pb-56">
       <TextShadowGradient className="translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
         <h1 className="text-4xl md:text-7xl">
           <span className={`${unbounded.className}`}>{title}</span>
