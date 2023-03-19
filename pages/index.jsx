@@ -84,8 +84,9 @@ const Page = ({ children, className, ...rest }) => (
     {/* <div className=" z-0">
       <div className="z-0 w-96 h-96 translate-y-48 translate-x-32 bg-black brightness-200 rounded-full"></div>
     </div> */}
-    <div className=" z-10 backdrop-blur-2xl bg-black/90" />
-    <div className="z-40 bg-black opacity-[0.1] bg-[url('/noise.png')]" />
+    <div className="z-0 bg-black/90" />
+    <div className="z-10 grayscale"><img src="https://tailwindcss.com/_next/static/media/docs@30.8b9a76a2.avif" style={{ objectFit: 'cover', objectPosition: 'center', height: '100%'}} /></div>
+    <div className="z-40 bg-black opacity-[0.05] bg-[url('/noise.png')]" />
     <div {...rest} className={`z-50 text-white ${className}`}>
       {children}
     </div>
@@ -115,7 +116,7 @@ const Logo = () => (
 );
 
 const SectionHeading = ({ heading }) => (
-  <div className="border-slate-400 pt-36 pb-12 md:pt-72 md:pb-24">
+  <div className="border-white pt-36 pb-12 md:pt-72 md:pb-24">
     <TextShadowGradient>
       <h3 className="text-4xl md:text-7xl  text-gradient">
         <span className={unbounded.className}>{heading}</span>
@@ -165,7 +166,7 @@ const Book = ({ children = "BOOK A CALL", className, ...rest }) => (
     onClick={() =>
       window.open("https://cal.com/honeyhexa/15min?duration=15", "_blank")
     }
-    className={`shadow-4xl hover:shadow-none transition-shadow duration-500 bg-black text-white overflow-hidden relative py-1 px-3 md:py-2 md:px-6 border-slate-400 border ${unbounded.className} ${className}`}
+    className={`shadow-4xl hover:shadow-none transition-shadow duration-500 bg-black text-white overflow-hidden relative py-1 px-3 md:py-2 md:px-6 border-white border ${unbounded.className} ${className}`}
   >
     {/* shadow-4xl hover:shadow-none transition-shadow */}
     <span className="text-sm md:text-lg font-medium text-gradient">
@@ -178,23 +179,24 @@ const Book = ({ children = "BOOK A CALL", className, ...rest }) => (
 const Button = ({ href, children, className, ...rest }) => (
   <button
     {...rest}
-    onClick={() =>
-      window.open("https://cal.com/honeyhexa/15min?duration=15", "_blank")
-    }
-    className={`shadow-4xl hover:shadow-none transition-shadow bg-black overflow-hidden relative border-slate-400 border ${unbounded.className} ${className}`}
+    onClick={() => {
+      if (href) {
+        window.open(href, "_blank");
+      }
+    }}
+    className={`shadow-4xl hover:shadow-none transition-shadow bg-black overflow-hidden relative border-white border ${unbounded.className} ${className}`}
   >
-    {/* shadow-4xl hover:shadow-none transition-shadow */}
     <TextShadowGradient>
       <span className="text-sm md:text-lg font-medium">{children}</span>
     </TextShadowGradient>
-    <div className="absolute top-0 -inset-full h-full w-full z-5 block transform -skew-x-[33deg] bg-gradient-to-r from-transparent to-white opacity-40 animate-shine" />
+    {/* <div className="absolute top-0 -inset-full h-full w-full z-5 block transform -skew-x-[33deg] bg-gradient-to-r from-transparent to-white opacity-40 animate-shine" /> */}
   </button>
 );
 
 export default function Home() {
   return (
     <Page>
-      <header className="z-30 sticky top-0 backdrop-blur-md bg-black/50 border-slate-400 border-b">
+      <header className="z-30 sticky top-0 backdrop-blur-md bg-black/50 border-white border-b">
         <PageContainer className="h-16 md:h-24 flex flex-row items-center justify-between">
           {/* HEADER SECTION */}
           <Logo />
@@ -205,7 +207,7 @@ export default function Home() {
       <PageContainer>
         <main className={rubik.className}>
           {/* HERO SECTION */}
-          <div className="border-slate-400 py-32 md:py-56">
+          <div className="border-white py-32 md:py-56">
             <TextShadowGradient className="translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
               <h1 className="text-4xl md:text-7xl">
                 <span className={`${unbounded.className}`}>
@@ -238,7 +240,7 @@ export default function Home() {
           </div>
 
           {/* ABOUT SECTION */}
-          <Section className="backdrop-blur-xl bg-black border-slate-400 border py-16 md:py-32 ">
+          <Section className="backdrop-blur-xl bg-black border-white border py-16 md:py-32 ">
             <h3 className="text-4xl md:text-4xl text-gradient">
               <span className={unbounded.className}>
                 Elevate Your Digital Game with Honey Hexa&apos;s Cutting-Edge
@@ -256,11 +258,11 @@ export default function Home() {
 
           {/* SERVICES SECTION */}
           <SectionHeading heading="Our Services" />
-          <div className="border-slate-400 border">
+          <div className="border-white border">
             <ol>
               {SERVICES.map((o, i) => (
                 <li
-                  className="backdrop-blur-xl bg-black px-4 py-16 md:px-16 border-slate-400 border-b"
+                  className="backdrop-blur-xl bg-black px-4 py-16 md:px-16 border-white border-b"
                   key={o.serviceName}
                 >
                   <h4 className="text-4xl text-gradient">
@@ -271,7 +273,7 @@ export default function Home() {
                     {o.tags.map((t) => (
                       <li
                         key={t}
-                        className="text-md md:text-lg py-1 px-3 md:py-4 md:px-8 border-slate-400 border"
+                        className="text-md md:text-lg py-1 px-3 md:py-4 md:px-8 border-white border"
                       >
                         {t}
                       </li>
@@ -284,7 +286,7 @@ export default function Home() {
 
           {/* WORK SECTION */}
           <SectionHeading heading="Our Work" />
-          <div className="backdrop-blur-xl bg-black border-slate-400 border p-4 md:p-24 flex flex-col gap-y-4 md:gap-y-24">
+          <div className="backdrop-blur-xl bg-black border-white border p-4 md:p-24 flex flex-col gap-y-4 md:gap-y-24">
             {WORKS.map((w) => (
               <div
                 key={w.workName}
@@ -321,11 +323,10 @@ export default function Home() {
             our partners and help them with their way forward.
           </h2>
           <Book className="mt-4 md:mt-8 translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:500ms]">
-            Let&apos;s discuss
           </Book>
         </div>
       </PageContainer>
-      <footer className="backdrop-blur-xl bg-black border-slate-400 border-t">
+      <footer className="backdrop-blur-xl bg-black border-white border-t">
         <PageContainer className="flex flex-col">
           <div className="h-16 md:h-24 flex items-center">
             <Logo />
@@ -353,6 +354,7 @@ export default function Home() {
                   >
                     {o.label}
                   </Button>
+                  <a href={o.href} className="hidden" />
                 </li>
               ))}
             </ul>
@@ -363,8 +365,8 @@ export default function Home() {
               Made with&nbsp;
               <span className="text-red-500">
                 <Heart />
-              </span>&nbsp;
-              by Ladies in Ahmedabad
+              </span>
+              &nbsp; by Ladies in Ahmedabad
             </p>
           </div>
         </PageContainer>
