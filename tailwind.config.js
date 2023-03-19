@@ -11,11 +11,16 @@ module.exports = {
   theme: {
     extend: {
       animation: {
+        "fade-in": "fade-in 1000ms var(--animation-delay, 0ms) ease forwards",
         shine: "shine 2s infinite",
         marquee: 'marquee 25s linear infinite',
         marquee2: 'marquee2 25s linear infinite',
       },
       keyframes: {
+        "fade-in": {
+          from: { opacity: 0, transform: "translateY(10px)" },
+          to: { opacity: 1, transform: "none" },
+        },
         shine: {
           "100%": { left: "125%" },
         },

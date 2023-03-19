@@ -14,7 +14,7 @@ const PageContainer = ({ children, className, ...rest }) => (
 
 const Page = ({ children, className, ...rest }) => (
   <div className="relative">
-    <div className="w-full h-full absolute top-0 z-0 opacity-10 bg-[url('/noise.png')]"></div>
+    <div className="w-full h-full absolute top-0 z-0 opacity-[0.15] bg-[url('/noise.png')]"></div>
     <div {...rest} className={`z-1 bg-black text-white ${className}`}>
       {children}
     </div>
@@ -28,11 +28,11 @@ const Logo = () => (
 );
 
 const SectionHeading = ({ heading }) => (
-  <Section className="border-r py-32 md:py-56 ">
+  <div className="border-slate-400 py-32 md:py-56 ">
     <h3 className="text-4xl md:text-7xl text-gradient">
       <span className={unbounded.className}>{heading}</span>
     </h3>
-  </Section>
+  </div>
 );
 
 const Section = ({ children, className, ...rest }) => (
@@ -63,9 +63,10 @@ const Book = ({ children = "BOOK A CALL", className, ...rest }) => (
     onClick={() =>
       window.open("https://cal.com/honeyhexa/15min?duration=15", "_blank")
     }
-    className={`overflow-hidden relative py-1 px-3 md:py-2 md:px-6 border text-sm md:text-lg font-medium text-gradient ${unbounded.className} ${className}`}
+    className={`bg-black overflow-hidden relative py-1 px-3 md:py-2 md:px-6 border-slate-400 border ${unbounded.className} ${className}`}
   >
-    {children}
+
+    <span className="text-sm md:text-lg font-medium text-gradient">{children}</span>
     <div className="absolute top-0 -inset-full h-full w-full z-5 block transform -skew-x-[33deg] bg-gradient-to-r from-transparent to-white opacity-40 animate-shine" />
   </button>
 );
@@ -73,7 +74,7 @@ const Book = ({ children = "BOOK A CALL", className, ...rest }) => (
 export default function Home() {
   return (
     <Page>
-      <header className="z-10 sticky top-0 backdrop-blur-md border-b">
+      <header className="z-10 sticky top-0 backdrop-blur-md border-slate-400 border-b">
         <PageContainer className="h-16 md:h-24 flex flex-row items-center justify-between">
           {/* HEADER SECTION */}
           <Logo />
@@ -97,22 +98,22 @@ export default function Home() {
       <PageContainer>
         <main className={rubik.className}>
           {/* HERO SECTION */}
-          <Section className="border-l py-32 md:py-56">
-            <h1 className="text-4xl md:text-7xl text-gradient">
+          <div className="border-slate-400 py-32 md:py-56">
+            <h1 className="translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:200ms] text-4xl md:text-7xl text-gradient">
               <span className={unbounded.className}>
                 WE TURN YOUR IDEAS INTO DIGITAL PRODUCTS
               </span>
             </h1>
-            <h2 className="text-md md:text-xl mt-12 md:mt-24">
+            <h2 className="translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:400ms] text-md md:text-xl mt-12 md:mt-24">
               Unleash the Power of Your Brand,
               <br />
               Improve your online presence and customer experience with us
             </h2>
-            <Book className="mt-4 md:mt-8" />
-          </Section>
+            <Book className="mt-4 md:mt-8 translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:500ms]" />
+          </div>
 
           {/* ABOUT SECTION */}
-          <Section className="border py-16 md:py-32 ">
+          <Section className="backdrop-blur-xl bg-black border-slate-400 border py-16 md:py-32 ">
             <h3 className="text-4xl md:text-4xl text-gradient">
               <span className={unbounded.className}>
                 Elevate Your Digital Game with Honey Hexa&apos;s Cutting-Edge
@@ -130,11 +131,11 @@ export default function Home() {
 
           {/* SERVICES SECTION */}
           <SectionHeading heading="Our Services" />
-          <div className="border">
+          <div className="border-slate-400 border">
             <ol>
               {SERVICES.map((o, i) => (
                 <li
-                  className="px-4 py-16 md:px-16 border-b"
+                  className="backdrop-blur-xl bg-black px-4 py-16 md:px-16 border-slate-400 border-b"
                   key={o.serviceName}
                 >
                   <h4 className="text-4xl text-gradient">
@@ -145,7 +146,7 @@ export default function Home() {
                     {o.tags.map((t) => (
                       <li
                         key={t}
-                        className="text-md md:text-lg py-1 px-3 md:py-4 md:px-8 border"
+                        className="text-md md:text-lg py-1 px-3 md:py-4 md:px-8 border-slate-400 border"
                       >
                         {t}
                       </li>
@@ -158,7 +159,7 @@ export default function Home() {
 
           {/* WORK SECTION */}
           <SectionHeading heading="Our Work" />
-          <div className="border p-4 md:p-24 flex flex-col gap-y-4 md:gap-y-24">
+          <div className="backdrop-blur-xl bg-black border-slate-400 border p-4 md:p-24 flex flex-col gap-y-4 md:gap-y-24">
             {WORKS.map((w) => (
               <div
                 key={w.workName}
@@ -198,8 +199,8 @@ export default function Home() {
           }
         />
       </PageContainer>
-      <footer className="border-t py-4 md:py-10">
-        <PageContainer className="flex flex-col md:flex-row justify-between h-56">
+      <footer className="backdrop-blur-xl bg-black border-slate-400 border-t py-4 md:py-10">
+        <PageContainer className="flex flex-col md:flex-row md:items-center justify-between h-56">
           <div>
             <Logo />
           </div>
