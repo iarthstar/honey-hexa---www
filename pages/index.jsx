@@ -25,6 +25,26 @@ const Page = ({ children, className, ...rest }) => (
   </div>
 );
 
+const ZStack = ({ children, className = "" }) => (
+  <div className={`z-stack ${className}`}>{children}</div>
+);
+
+const TextShadowGradient = ({
+  children,
+  className,
+  shadowClass = "text-shadow",
+  gradientClass = "text-gradient",
+  ...rest
+}) => (
+  <ZStack className={className} {...rest}>
+    <div className={`${shadowClass}`}>
+      {children}
+    </div>
+    <div className={`${gradientClass}`}>
+      {children}
+    </div>
+  </ZStack>
+);
 const Logo = () => (
   <h3 className="text-lg md:text-3xl font-bold  text-gradient">
     <span className={unbounded.className}>HONEY HEXA</span>
@@ -33,9 +53,11 @@ const Logo = () => (
 
 const SectionHeading = ({ heading }) => (
   <div className="border-slate-400 pt-36 pb-12 md:pt-72 md:pb-24">
+    <TextShadowGradient>
     <h3 className="text-4xl md:text-7xl  text-gradient">
       <span className={unbounded.className}>{heading}</span>
     </h3>
+    </TextShadowGradient>
   </div>
 );
 
@@ -105,11 +127,30 @@ export default function Home() {
         <main className={rubik.className}>
           {/* HERO SECTION */}
           <div className="border-slate-400 py-32 md:py-56">
-            <h1 className="translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:200ms] text-4xl md:text-7xl text-gradient">
-              <span className={`${unbounded.className}`}>
-                WE TURN YOUR IDEAS INTO DIGITAL PRODUCTS
-              </span>
-            </h1>
+
+            <TextShadowGradient className="translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
+              <h1 className="text-4xl md:text-7xl">
+                <span className={`${unbounded.className}`}>
+                  WE TURN YOUR IDEAS INTO DIGITAL PRODUCTS
+                </span>
+              </h1>
+            </TextShadowGradient>
+            {/* <ZStack >
+              <div className="pt-32 md:pt-56 pb-12 md:pb-24">
+                <h1 className="text-4xl md:text-7xl text-shadow">
+                  <span className={`${unbounded.className}`}>
+                    WE TURN YOUR IDEAS INTO DIGITAL PRODUCTS
+                  </span>
+                </h1>
+              </div>
+              <div className="pt-32 md:pt-56 pb-12 md:pb-24">
+                <h1 className="text-4xl md:text-7xl text-gradient">
+                  <span className={`${unbounded.className}`}>
+                    WE TURN YOUR IDEAS INTO DIGITAL PRODUCTS
+                  </span>
+                </h1>
+              </div>
+            </ZStack> */}
             <h2 className="translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:400ms] text-md md:text-xl mt-12 md:mt-24">
               Unleash the Power of Your Brand,
               <br />
@@ -197,13 +238,14 @@ export default function Home() {
       <PageContainer>
         <SectionHeading heading={"Let's Connect"} />
         <div className="pb-32">
-            <h2 className="text-md md:text-xl">
-              Free consultation for your digital needs, we love to connect with our partners and help them with their way forward.
-            </h2>
-            <Book className="mt-4 md:mt-8 translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:500ms]">
-              Let&apos;s discuss
-            </Book>
-          </div>
+          <h2 className="text-md md:text-xl">
+            Free consultation for your digital needs, we love to connect with
+            our partners and help them with their way forward.
+          </h2>
+          <Book className="mt-4 md:mt-8 translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:500ms]">
+            Let&apos;s discuss
+          </Book>
+        </div>
       </PageContainer>
       <footer className="backdrop-blur-xl bg-black border-slate-400 border-t py-4 md:py-10">
         <PageContainer className="flex flex-col md:flex-row md:items-center justify-between h-56">
