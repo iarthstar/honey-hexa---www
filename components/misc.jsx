@@ -1,5 +1,6 @@
 import { PageContainer } from "./page-container";
 import { Rubik, Unbounded } from "next/font/google";
+import Link from "next/link";
 
 const rubik = Rubik({ subsets: ["latin"] });
 const unbounded = Unbounded({ subsets: ["latin"] });
@@ -87,9 +88,11 @@ export const TextShadowGradient = ({
   </ZStack>
 );
 export const Logo = () => (
-  <h3 className="text-lg md:text-3xl font-bold  text-gradient">
-    <span className={unbounded.className}>HONEY HEXA</span>
-  </h3>
+  <Link href="/">
+    <h3 className="text-lg md:text-3xl font-bold  text-gradient">
+      <span className={unbounded.className}>HONEY HEXA</span>
+    </h3>
+  </Link>
 );
 
 export const SectionHeading = ({ heading }) => (
