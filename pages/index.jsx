@@ -13,23 +13,27 @@ const PageContainer = ({ children, className, ...rest }) => (
 );
 
 const Page = ({ children, className, ...rest }) => (
-  <div className="relative">
-    <div className="w-full h-full absolute top-0 z-0 opacity-[0.15] bg-[url('/noise.png')]"></div>
-    <div {...rest} className={`z-1 bg-black text-white ${className}`}>
+  <div className="z-stack">
+    {/* <div className=" z-0">
+      <div className="z-0 w-96 h-96 translate-y-48 translate-x-32 bg-black brightness-200 rounded-full"></div>
+    </div> */}
+    <div className=" z-10 backdrop-blur-2xl bg-black/90" />
+    <div className="z-40 bg-black opacity-[0.1] bg-[url('/noise.png')]" />
+    <div {...rest} className={`z-50 text-white ${className}`}>
       {children}
     </div>
   </div>
 );
 
 const Logo = () => (
-  <h3 className="text-lg md:text-3xl font-bold text-gradient">
+  <h3 className="text-lg md:text-3xl font-bold drop-shadow-4xl text-gradient">
     <span className={unbounded.className}>HONEY HEXA</span>
   </h3>
 );
 
 const SectionHeading = ({ heading }) => (
-  <div className="border-slate-400 py-32 md:py-56 ">
-    <h3 className="text-4xl md:text-7xl text-gradient">
+  <div className="border-slate-400 pt-36 pb-12 md:pt-72 md:pb-24">
+    <h3 className="text-4xl md:text-7xl drop-shadow-4xl text-gradient">
       <span className={unbounded.className}>{heading}</span>
     </h3>
   </div>
@@ -65,8 +69,9 @@ const Book = ({ children = "BOOK A CALL", className, ...rest }) => (
     }
     className={`bg-black overflow-hidden relative py-1 px-3 md:py-2 md:px-6 border-slate-400 border ${unbounded.className} ${className}`}
   >
-
-    <span className="text-sm md:text-lg font-medium text-gradient">{children}</span>
+    <span className="text-sm md:text-lg font-medium text-gradient">
+      {children}
+    </span>
     <div className="absolute top-0 -inset-full h-full w-full z-5 block transform -skew-x-[33deg] bg-gradient-to-r from-transparent to-white opacity-40 animate-shine" />
   </button>
 );
@@ -74,7 +79,7 @@ const Book = ({ children = "BOOK A CALL", className, ...rest }) => (
 export default function Home() {
   return (
     <Page>
-      <header className="z-10 sticky top-0 backdrop-blur-md border-slate-400 border-b">
+      <header className="z-30 sticky top-0 backdrop-blur-md bg-black/50 border-slate-400 border-b">
         <PageContainer className="h-16 md:h-24 flex flex-row items-center justify-between">
           {/* HEADER SECTION */}
           <Logo />
@@ -99,7 +104,7 @@ export default function Home() {
         <main className={rubik.className}>
           {/* HERO SECTION */}
           <div className="border-slate-400 py-32 md:py-56">
-            <h1 className="translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:200ms] text-4xl md:text-7xl text-gradient">
+            <h1 className="drop-shadow-4xl translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:200ms] text-4xl md:text-7xl text-gradient">
               <span className={unbounded.className}>
                 WE TURN YOUR IDEAS INTO DIGITAL PRODUCTS
               </span>
@@ -109,7 +114,7 @@ export default function Home() {
               <br />
               Improve your online presence and customer experience with us
             </h2>
-            <Book className="mt-4 md:mt-8 translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:500ms]" />
+            <Book className="shadow-4xl hover:shadow-none transition-shadow mt-4 md:mt-8 translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:500ms]" />
           </div>
 
           {/* ABOUT SECTION */}
@@ -189,15 +194,15 @@ export default function Home() {
 
       {/* FOOTER SECTION */}
       <PageContainer>
-        <SectionHeading
-          heading={
-            <div>
-              Let&apos;s Connect
-              <br />
-              <Book />
-            </div>
-          }
-        />
+        <SectionHeading heading={"Let's Connect"} />
+        <div className="pb-32">
+            <h2 className="text-md md:text-xl">
+              Free consultation for your digital needs, we love to connect with our partners and help them with their way forward.
+            </h2>
+            <Book className="shadow-4xl hover:shadow-none transition-shadow mt-4 md:mt-8 translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:500ms]">
+              Let&apos;s discuss
+            </Book>
+          </div>
       </PageContainer>
       <footer className="backdrop-blur-xl bg-black border-slate-400 border-t py-4 md:py-10">
         <PageContainer className="flex flex-col md:flex-row md:items-center justify-between h-56">

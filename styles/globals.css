@@ -41,4 +41,20 @@
   .button-shiny:hover::before {
     left: 150%;
   }
+
+  .z-stack {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 0;  /* NEW */
+  min-width: 0;   /* NEW; needed for Firefox */
+  }
+
+  .z-stack > div {
+    width: 100%;
+    grid-area: 1 / 1;
+    overflow: hidden;  /* NEW */
+  min-width: 0; 
+  }
+
+
 }

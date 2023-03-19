@@ -10,6 +10,28 @@ module.exports = {
   ],
   theme: {
     extend: {
+      dropShadow: {
+        '3xl': '0 35px 35px black',
+        '4xl': [
+          '0px 2px 2px rgba(0, 0, 0, 0.5)', 
+          '0px 4px 4px rgba(0, 0, 0, 0.5)', 
+          '0px 8px 8px rgba(0, 0, 0, 0.5)', 
+          '0px 16px 16px rgba(0, 0, 0, 0.5)', 
+          '0px 32px 32px rgba(0, 0, 0, 0.5)', 
+          '0px 64px 64px rgba(0, 0, 0, 0.5)'
+        ],
+      },
+      boxShadow: {
+        '3xl': '0 35px 35px black',
+        '4xl': [
+          '0px 2px 2px rgba(0, 0, 0, 0.5)', 
+          '0px 4px 4px rgba(0, 0, 0, 0.5)', 
+          '0px 8px 8px rgba(0, 0, 0, 0.5)', 
+          '0px 16px 16px rgba(0, 0, 0, 0.5)', 
+          '0px 32px 32px rgba(0, 0, 0, 0.5)', 
+          '0px 64px 64px rgba(0, 0, 0, 0.5)'
+        ],
+      },
       animation: {
         "fade-in": "fade-in 1000ms var(--animation-delay, 0ms) ease forwards",
         shine: "shine 2s infinite",
