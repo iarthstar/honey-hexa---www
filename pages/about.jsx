@@ -3,9 +3,6 @@ import { Header } from "@/components/header";
 import {
   AboutSection,
   FooterSection,
-  HeroSection,
-  ServicesSection,
-  WorkSection,
 } from "@/components/misc";
 import { Page } from "@/components/page";
 import { Rubik } from "next/font/google";
@@ -17,10 +14,7 @@ export default function Home() {
     <Page className={rubik.className}>
       <Header />
       <main className={rubik.className}>
-        <HeroSection />
         <AboutSection />
-        <ServicesSection />
-        <WorkSection />
           
       </main>
       <FooterSection />

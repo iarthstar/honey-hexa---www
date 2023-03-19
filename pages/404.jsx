@@ -1,28 +1,18 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import {
-  AboutSection,
   FooterSection,
-  HeroSection,
-  ServicesSection,
-  WorkSection,
 } from "@/components/misc";
 import { Page } from "@/components/page";
 import { Rubik } from "next/font/google";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Page404() {
   return (
     <Page className={rubik.className}>
       <Header />
-      <main className={rubik.className}>
-        <HeroSection />
-        <AboutSection />
-        <ServicesSection />
-        <WorkSection />
-          
-      </main>
+      {/* TODO: Page not found view */}
       <FooterSection />
       <Footer />
     </Page>
