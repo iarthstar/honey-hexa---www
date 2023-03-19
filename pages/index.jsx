@@ -26,14 +26,14 @@ const Page = ({ children, className, ...rest }) => (
 );
 
 const Logo = () => (
-  <h3 className="text-lg md:text-3xl font-bold drop-shadow-4xl text-gradient">
+  <h3 className="text-lg md:text-3xl font-bold  text-gradient">
     <span className={unbounded.className}>HONEY HEXA</span>
   </h3>
 );
 
 const SectionHeading = ({ heading }) => (
   <div className="border-slate-400 pt-36 pb-12 md:pt-72 md:pb-24">
-    <h3 className="text-4xl md:text-7xl drop-shadow-4xl text-gradient">
+    <h3 className="text-4xl md:text-7xl  text-gradient">
       <span className={unbounded.className}>{heading}</span>
     </h3>
   </div>
@@ -67,8 +67,9 @@ const Book = ({ children = "BOOK A CALL", className, ...rest }) => (
     onClick={() =>
       window.open("https://cal.com/honeyhexa/15min?duration=15", "_blank")
     }
-    className={`bg-black overflow-hidden relative py-1 px-3 md:py-2 md:px-6 border-slate-400 border ${unbounded.className} ${className}`}
+    className={` bg-black overflow-hidden relative py-1 px-3 md:py-2 md:px-6 border-slate-400 border ${unbounded.className} ${className}`}
   >
+    {/* shadow-4xl hover:shadow-none transition-shadow */}
     <span className="text-sm md:text-lg font-medium text-gradient">
       {children}
     </span>
@@ -104,7 +105,7 @@ export default function Home() {
         <main className={rubik.className}>
           {/* HERO SECTION */}
           <div className="border-slate-400 py-32 md:py-56">
-            <h1 className="drop-shadow-4xl translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:200ms] text-4xl md:text-7xl text-gradient">
+            <h1 className=" translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:200ms] text-4xl md:text-7xl text-gradient">
               <span className={unbounded.className}>
                 WE TURN YOUR IDEAS INTO DIGITAL PRODUCTS
               </span>
@@ -114,7 +115,7 @@ export default function Home() {
               <br />
               Improve your online presence and customer experience with us
             </h2>
-            <Book className="shadow-4xl hover:shadow-none transition-shadow mt-4 md:mt-8 translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:500ms]" />
+            <Book className="mt-4 md:mt-8 translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:500ms]" />
           </div>
 
           {/* ABOUT SECTION */}
@@ -199,7 +200,7 @@ export default function Home() {
             <h2 className="text-md md:text-xl">
               Free consultation for your digital needs, we love to connect with our partners and help them with their way forward.
             </h2>
-            <Book className="shadow-4xl hover:shadow-none transition-shadow mt-4 md:mt-8 translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:500ms]">
+            <Book className="mt-4 md:mt-8 translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:500ms]">
               Let&apos;s discuss
             </Book>
           </div>
