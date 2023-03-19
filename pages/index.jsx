@@ -67,7 +67,7 @@ const Book = ({ children = "BOOK A CALL", className, ...rest }) => (
     onClick={() =>
       window.open("https://cal.com/honeyhexa/15min?duration=15", "_blank")
     }
-    className={` bg-black overflow-hidden relative py-1 px-3 md:py-2 md:px-6 border-slate-400 border ${unbounded.className} ${className}`}
+    className={`shadow-4xl hover:shadow-none transition-shadow bg-black overflow-hidden relative py-1 px-3 md:py-2 md:px-6 border-slate-400 border ${unbounded.className} ${className}`}
   >
     {/* shadow-4xl hover:shadow-none transition-shadow */}
     <span className="text-sm md:text-lg font-medium text-gradient">
@@ -105,8 +105,8 @@ export default function Home() {
         <main className={rubik.className}>
           {/* HERO SECTION */}
           <div className="border-slate-400 py-32 md:py-56">
-            <h1 className=" translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:200ms] text-4xl md:text-7xl text-gradient">
-              <span className={unbounded.className}>
+            <h1 className="translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:200ms] text-4xl md:text-7xl text-gradient">
+              <span className={`${unbounded.className}`}>
                 WE TURN YOUR IDEAS INTO DIGITAL PRODUCTS
               </span>
             </h1>
