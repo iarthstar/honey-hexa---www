@@ -29,7 +29,8 @@ module.exports = {
           '0px 8px 8px rgba(0, 0, 0, 0.5)', 
           '0px 16px 16px rgba(0, 0, 0, 0.5)', 
           '0px 32px 32px rgba(0, 0, 0, 0.5)', 
-          '0px 64px 64px rgba(0, 0, 0, 0.5)'
+          '0px 64px 64px rgba(0, 0, 0, 0.5)',
+          '0px 128px 128px rgba(0, 0, 0, 0.5)'
         ],
       },
       animation: {
