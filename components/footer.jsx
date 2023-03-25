@@ -39,6 +39,7 @@ export function Footer() {
             {SOCIAL_LINKS.map((o) => (
               <li key={o.href}>
                 <Button
+                  type="button"
                   className="flex justify-center items-center h-12 w-12"
                   href={o.href}
                 >
