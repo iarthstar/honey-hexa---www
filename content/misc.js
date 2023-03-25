@@ -57,7 +57,7 @@ const generateDefaultMetaData = (o) => {
   const desc =
     o?.desc ??
     "We turn your Ideas into Digital Products. Unleash the Power of Your Brand, Improve your online presence and customer experience with us";
-  const imgUrl = addToOrigin("/honey_hexa_og.png");
+  const imgUrl = addToOrigin("/meta/honey_hexa_og.png");
   return {
     title: title,
     description: desc,
