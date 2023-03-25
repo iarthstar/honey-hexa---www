@@ -81,13 +81,13 @@ const generateDefaultMetaData = (o) => {
       type: "website",
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title: title,
       description: desc,
       creator: "@honeyhexa",
       handle: '@honeyhexa',
       site: '@honeyhexa',
-      cardType: 'summary',
+      cardType: 'summary_large_image',
     },
     appleWebApp: {
       title: title,
