@@ -72,8 +72,6 @@ const generateDefaultMetaData = (o) => {
       images: [
         {
           url: "/honey_hexa_og.avif",
-          width: 800,
-          height: 600,
         },
       ],
       locale: "en-US",
