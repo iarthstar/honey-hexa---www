@@ -22,10 +22,76 @@ export const SERVICES = [
 ];
 
 export const WORKS = [
-  { workName: "Kuber Creations", tags: [] },
-  { workName: "Netra Constructions", tags: [] },
-  { workName: "Harshid Engravers", tags: [] },
-  { workName: "AJK Masala", tags: [] },
+  {
+    path: "kuber-creations",
+    content: {
+      title: "Kuber Creations",
+      tags: [],
+      assets: [
+        "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173479679-eecdb747a5bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173479711-d47c29e93633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173480513-8e2d4f583b86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173479678-eed90dba2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+      ],
+    },
+  },
+  {
+    path: "netra-constuctions",
+    content: {
+      title: "Netra Constructions",
+      tags: [],
+      assets: [
+        "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173479679-eecdb747a5bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173479711-d47c29e93633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173480513-8e2d4f583b86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173479678-eed90dba2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+      ],
+    },
+  },
+  {
+    path: "harshid-engravers",
+    content: {
+      title: "Harshid Engravers",
+      tags: [],
+      assets: [
+        "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173479679-eecdb747a5bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173479711-d47c29e93633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173480513-8e2d4f583b86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173479678-eed90dba2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+      ],
+    },
+  },
+  {
+    path: "ajk-masala",
+    content: {
+      title: "AJK Masala",
+      tags: [],
+      assets: [
+        "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173479679-eecdb747a5bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173479711-d47c29e93633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173480513-8e2d4f583b86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173479678-eed90dba2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+      ],
+    },
+  },
+  {
+    path: "ganesh-valves",
+    content: {
+      title: "Ganesh Valves",
+      tags: [],
+      assets: [
+        "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173479679-eecdb747a5bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173479711-d47c29e93633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173480513-8e2d4f583b86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173479678-eed90dba2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+      ],
+    },
+  },
 ];
 
 export const NAV_LINKS = [
@@ -76,8 +142,8 @@ const generateDefaultMetaData = (o) => {
       images: [
         {
           url: imgUrl,
-          alt: 'Honey Hexa | Image Alt',
-          type: 'image/png',
+          alt: "Honey Hexa | Image Alt",
+          type: "image/png",
         },
       ],
       locale: "en-US",
@@ -88,14 +154,14 @@ const generateDefaultMetaData = (o) => {
       title: title,
       description: desc,
       creator: "@honeyhexa",
-      handle: '@honeyhexa',
-      site: '@honeyhexa',
-      cardType: 'summary_large_image',
+      handle: "@honeyhexa",
+      site: "@honeyhexa",
+      cardType: "summary_large_image",
     },
     appleWebApp: {
       title: title,
       statusBarStyle: "black-translucent",
-      startupImage: [ imgUrl],
+      startupImage: [imgUrl],
     },
     robots: {
       index: true,

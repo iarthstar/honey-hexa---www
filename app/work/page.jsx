@@ -13,7 +13,6 @@ const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata = { ...METADATA_WORK };
 
-
 export default function PageWork() {
   return (
     <Page className={rubik.className}>
