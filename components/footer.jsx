@@ -38,15 +38,15 @@ export function Footer() {
           <ul className="flex flex-row gap-x-6">
             {SOCIAL_LINKS.map((o) => (
               <li key={o.href}>
-                <Button
-                  type="button"
-                  aria-label={o.label}
-                  className="flex justify-center items-center h-12 w-12"
-                  href={o.href}
-                >
-                  {LOGO_MAP[o.label]}
-                </Button>
-                <a href={o.href} className="hidden" />
+                <a href={o.href} target="_blank">
+                  <Button
+                    type="button"
+                    aria-label={o.label}
+                    className="flex justify-center items-center h-12 w-12"
+                  >
+                    {LOGO_MAP[o.label]}
+                  </Button>
+                </a>
               </li>
             ))}
           </ul>
@@ -56,7 +56,7 @@ export function Footer() {
           <p className="flex flex-row mt-4">
             Made with&nbsp;
             <span className="text-red-500">
-              <Heart style={{ width: '12px'}} />
+              <Heart style={{ width: "12px" }} />
             </span>
             &nbsp; by Women in Ahmedabad
           </p>
