@@ -38,15 +38,14 @@ export function Footer() {
           <ul className="flex flex-row gap-x-6">
             {SOCIAL_LINKS.map((o) => (
               <li key={o.href}>
-                <a href={o.href} target="_blank">
                   <Button
                     type="button"
+                    href={o.href}
                     aria-label={o.label}
                     className="flex justify-center items-center h-12 w-12"
                   >
                     {LOGO_MAP[o.label]}
                   </Button>
-                </a>
               </li>
             ))}
           </ul>

@@ -131,38 +131,32 @@ export const Section = ({ children, className, ...rest }) => (
 );
 
 export const Book = ({ children = "BOOK A CALL", className, ...rest }) => (
-  <button
-    {...rest}
-    type="button"
-    onClick={() =>
-      window.open("https://cal.com/honeyhexa/15min?duration=15", "_blank")
-    }
-    className={`shadow-4xl hover:shadow-none transition-shadow duration-500 bg-black text-white overflow-hidden relative py-1 px-3 md:py-2 md:px-6 border-white border ${unbounded.className} ${className}`}
-  >
-    {/* shadow-4xl hover:shadow-none transition-shadow */}
-    <span className="text-sm md:text-lg font-medium text-gradient">
-      {children}
-    </span>
-    <div className="absolute top-0 -inset-full h-full w-full z-5 block transform -skew-x-[33deg] bg-gradient-to-r from-transparent to-white opacity-40 animate-shine" />
-  </button>
+  <a href="https://cal.com/honeyhexa/15min?duration=15" target="_blank">
+    <button
+      {...rest}
+      type="button"
+      className={`shadow-4xl hover:shadow-none transition-shadow duration-500 bg-black text-white overflow-hidden relative py-1 px-3 md:py-2 md:px-6 border-white border ${unbounded.className} ${className}`}
+    >
+      <span className="text-sm md:text-lg font-medium text-gradient">
+        {children}
+      </span>
+      <div className="absolute top-0 -inset-full h-full w-full z-5 block transform -skew-x-[33deg] bg-gradient-to-r from-transparent to-white opacity-40 animate-shine" />
+    </button>
+  </a>
 );
 
 export const Button = ({ href, children, className, ...rest }) => (
-  <button
-    {...rest}
-    type="button"
-    onClick={() => {
-      if (href) {
-        window.open(href, "_blank");
-      }
-    }}
-    className={`shadow-4xl hover:shadow-none transition-shadow bg-black overflow-hidden relative border-white border ${unbounded.className} ${className}`}
-  >
-    <TextShadowGradient>
-      <span className="text-sm md:text-lg font-medium">{children}</span>
-    </TextShadowGradient>
-    {/* <div className="absolute top-0 -inset-full h-full w-full z-5 block transform -skew-x-[33deg] bg-gradient-to-r from-transparent to-white opacity-40 animate-shine" /> */}
-  </button>
+  <a href={href} target="_blank">
+    <button
+      {...rest}
+      type="button"
+      className={`shadow-4xl hover:shadow-none transition-shadow bg-black overflow-hidden relative border-white border ${unbounded.className} ${className}`}
+    >
+      <TextShadowGradient>
+        <span className="text-sm md:text-lg font-medium">{children}</span>
+      </TextShadowGradient>
+    </button>
+  </a>
 );
 
 export const HeroSection = ({ title, desc, cta }) => (
