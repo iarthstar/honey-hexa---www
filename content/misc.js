@@ -43,67 +43,102 @@ export const SOCIAL_LINKS = [
 
 const ORIGIN = "https://www.honeyhexa.com";
 const ROUTES = {
-  ABOUT: '/about',
-  SERVICES: '/services',
-  WORK: '/work',
-  CONTACT: '/contact',
-}
-const addToOrigin = (path) => `${ORIGIN}${path}`;
+  ABOUT: "/about",
+  SERVICES: "/services",
+  WORK: "/work",
+  CONTACT: "/contact",
+};
+const addToOrigin = (path = "") => `${ORIGIN}${path}`;
 
 // ------------------------------------------------------ METADATA ------ START
 
-export const METADATA_HOME = {
-  title: "Honey Hexa | Home",
-  description:
-    "We turn your Ideas into Digital Products. Unleash the Power of Your Brand, Improve your online presence and customer experience with us",
-  alternates: {
-    canonical: ORIGIN,
-  },
+const generateDefaultMetaData = (o) => {
+  const title = `Honey Hexa | ${o?.title}`;
+  const desc =
+    o?.desc ??
+    "We turn your Ideas into Digital Products. Unleash the Power of Your Brand, Improve your online presence and customer experience with us";
+  return {
+    title: title,
+    description: desc,
+    alternates: {
+      canonical: addToOrigin(o?.path),
+    },
+    category: "technology",
+    openGraph: {
+      title: title,
+      description: desc,
+      url: addToOrigin(o?.path),
+      siteName: title,
+      images: [
+        {
+          url: "honey_hexa_og.avif",
+          width: 800,
+          height: 600,
+        },
+      ],
+      locale: "en-US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: title,
+      description: desc,
+      creator: "@honeyhexa",
+      images: ["honey_hexa_og.avif"],
+    },
+    appleWebApp: {
+      title: title,
+      statusBarStyle: "black-translucent",
+      startupImage: ["honey_hexa_og.avif"],
+    },
+    robots: {
+      index: false,
+      follow: true,
+      nocache: true,
+      googleBot: {
+        index: true,
+        follow: false,
+        noimageindex: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+  };
 };
 
-export const METADATA_SERVICES = {
-  title: "Honey Hexa | Services",
-  description:
-    "We aim to provide you comprehensive suite of services to help your businesses build, maintain, and grow their online presence and brand identity.",
-  alternates: {
-    canonical: addToOrigin(ROUTES.SERVICES),
-  },
-};
+export const METADATA_HOME = generateDefaultMetaData({
+  title: "Home",
+  desc: "We turn your Ideas into Digital Products. Unleash the Power of Your Brand, Improve your online presence and customer experience with us",
+});
 
-export const METADATA_ABOUT = {
-  title: "Honey Hexa | About",
-  description:
-    "Elevate Your Digital Game with Honey Hexa's Cutting-Edge Strategies.",
-  alternates: {
-    canonical: addToOrigin(ROUTES.ABOUT),
-  },
-};
+export const METADATA_SERVICES = generateDefaultMetaData({
+  title: "Services",
+  desc: "We aim to provide you comprehensive suite of services to help your businesses build, maintain, and grow their online presence and brand identity.",
+  path: ROUTES.SERVICES,
+});
 
-export const METADATA_CONTACT = {
-  title: "Honey Hexa | Contact",
-  description:
-    "Book Now, Free consultation for your digital needs, we love to connect with our partners and help them with their way forward.",
-  alternates: {
-    canonical: addToOrigin(ROUTES.CONTACT),
-  },
-};
+export const METADATA_ABOUT = generateDefaultMetaData({
+  title: "About",
+  desc: "Elevate Your Digital Game with Honey Hexa's Cutting-Edge Strategies.",
+  path: ROUTES.ABOUT,
+});
 
-export const METADATA_WORK = {
-  title: "Honey Hexa | Work",
-  description:
-    "Design portfolio and case studies of branding, marketing website, UI/UX design, and mobile app design work by Honey Hexa.",
-  alternates: {
-    canonical: addToOrigin(ROUTES.WORK),
-  },
-};
+export const METADATA_CONTACT = generateDefaultMetaData({
+  title: "Contact",
+  desc: "Book Now, Free consultation for your digital needs, we love to connect with our partners and help them with their way forward.",
+  path: ROUTES.CONTACT,
+});
 
-export const METADATA_NOT_FOUND = {
-  title: "Honey Hexa | 404",
-  description:
-    "Book Now, Free consultation for your digital needs, we love to connect with our partners and help them with their way forward.",
-  alternates: {
-    canonical: ORIGIN,
-  },
-};
+export const METADATA_WORK = generateDefaultMetaData({
+  title: "Work",
+  desc: "Design portfolio and case studies of branding, marketing website, UI/UX design, and mobile app design work by Honey Hexa.",
+  path: ROUTES.WORK,
+});
+
+export const METADATA_NOT_FOUND = generateDefaultMetaData({
+  title: "404",
+  desc: "Book Now, Free consultation for your digital needs, we love to connect with our partners and help them with their way forward.",
+});
 
 // ------------------------------------------------------ METADATA -------- END
