@@ -92,7 +92,7 @@ const generateDefaultMetaData = (o) => {
       startupImage: ["/honey_hexa_og.avif"],
     },
     robots: {
-      index: false,
+      index: true,
       follow: true,
       nocache: true,
       googleBot: {
