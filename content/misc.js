@@ -72,7 +72,7 @@ const generateDefaultMetaData = (o) => {
       images: [
         {
           url: addToOrigin("/honey_hexa_og.avif"),
-          alt: 'Honey Hexa Image Alt',
+          alt: 'Honey Hexa | Image Alt',
           type: 'image/avif',
         },
       ],
