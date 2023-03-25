@@ -40,6 +40,7 @@ export function Footer() {
               <li key={o.href}>
                 <Button
                   type="button"
+                  aria-label={o.label}
                   className="flex justify-center items-center h-12 w-12"
                   href={o.href}
                 >
