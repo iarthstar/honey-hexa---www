@@ -208,7 +208,7 @@ export const Button = ({ href, children, className, ...rest }) => (
 export const HeroSection = ({ title, desc, cta }) => (
   <PageContainer>
     {/* HERO SECTION */}
-    <div className="border-white pt-48 pb-24 md:pt-72 md:pb-56">
+    <div className="border-white pt-48 pb-24 md:pt-80 md:pb-48">
       <TextShadowGradient className="translate-y-[1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
         <h1 className="text-4xl md:text-7xl">
           <span className={`${unbounded.className}`}>{title}</span>
@@ -273,27 +273,28 @@ export const WorkSection = ({ title, list }) => (
     <SectionHeading heading={title} />
     <div className="backdrop-blur-xl bg-black border-white border p-4 md:p-24 flex flex-col gap-y-4 md:gap-y-24">
       {list.map((w) => (
-        <div
-          key={w.workName}
-          className={`${unbounded.className} h-96 flex items-center justify-center overflow-x-hidden bg-cover bg-[url('https://images.unsplash.com/photo-1677443030437-93c9f5e08ae6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3432&q=80')]`}
-        >
-          <div className="relative">
-            <div className="flex flex-row animate-marquee whitespace-nowrap text-6xl">
-              {[...Array(10).keys()].map((k) => (
-                <div key={k} className="text-gradient">
-                  &nbsp;&nbsp;•&nbsp;&nbsp;VIEW CASE
-                </div>
-              ))}
-            </div>
-            <div className="absolute top-0 flex flex-row animate-marquee2 whitespace-nowrap text-6xl">
-              {[...Array(10).keys()].map((k) => (
-                <div key={k} className="text-gradient">
-                  &nbsp;&nbsp;•&nbsp;&nbsp;VIEW CASE
-                </div>
-              ))}
+        <Link key={w.path} href={`/work/${w.path}`}>
+          <div
+            className={`${unbounded.className} h-48 flex items-center justify-center overflow-x-hidden`}
+          >
+            <div className="relative">
+              <div className="flex flex-row animate-marquee whitespace-nowrap text-6xl">
+                {[...Array(4).keys()].map((k) => (
+                  <div key={k} className="text-gradient">
+                    &nbsp;&nbsp;•&nbsp;&nbsp;{w?.content?.title}
+                  </div>
+                ))}
+              </div>
+              <div className="absolute top-0 flex flex-row animate-marquee2 whitespace-nowrap text-6xl">
+                {[...Array(4).keys()].map((k) => (
+                  <div key={k} className="text-gradient">
+                    &nbsp;&nbsp;•&nbsp;&nbsp;{w?.content?.title}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   </PageContainer>
