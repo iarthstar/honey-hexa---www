@@ -7,6 +7,9 @@ import {
   ICON_DRIBBBLE,
   ICON_INSTAGRAM,
   ICON_TWITTER,
+  ICON_BEHANCE,
+  ICON_BENTO,
+  ICON_READCV,
   Logo,
 } from "@/components/misc";
 import { PageContainer } from "./page-container";
@@ -15,6 +18,9 @@ const LOGO_MAP = {
   TWITTER: <ICON_TWITTER />,
   DRIBBBLE: <ICON_DRIBBBLE />,
   INSTAGRAM: <ICON_INSTAGRAM />,
+  BEHANCE: <ICON_BEHANCE />,
+  BENTO: <ICON_BENTO />,
+  READCV: <ICON_READCV />,
 };
 
 export function Footer() {
@@ -35,7 +41,7 @@ export function Footer() {
             ))}
           </ul>
 
-          <ul className="flex flex-row gap-x-6">
+          <ul className="flex flex-row gap-x-6 gap-y-6 flex-wrap">
             {SOCIAL_LINKS.map((o) => (
               <li key={o.href}>
                   <Button
