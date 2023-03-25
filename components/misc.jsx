@@ -133,6 +133,7 @@ export const Section = ({ children, className, ...rest }) => (
 export const Book = ({ children = "BOOK A CALL", className, ...rest }) => (
   <button
     {...rest}
+    type="button"
     onClick={() =>
       window.open("https://cal.com/honeyhexa/15min?duration=15", "_blank")
     }
@@ -149,6 +150,7 @@ export const Book = ({ children = "BOOK A CALL", className, ...rest }) => (
 export const Button = ({ href, children, className, ...rest }) => (
   <button
     {...rest}
+    type="button"
     onClick={() => {
       if (href) {
         window.open(href, "_blank");
