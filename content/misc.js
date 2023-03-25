@@ -57,6 +57,7 @@ const generateDefaultMetaData = (o) => {
   const desc =
     o?.desc ??
     "We turn your Ideas into Digital Products. Unleash the Power of Your Brand, Improve your online presence and customer experience with us";
+  const imgUrl = addToOrigin("/honey_hexa_og.png");
   return {
     title: title,
     description: desc,
@@ -71,27 +72,27 @@ const generateDefaultMetaData = (o) => {
       siteName: title,
       images: [
         {
-          url: addToOrigin("/honey_hexa_og.avif"),
+          url: imgUrl,
           alt: 'Honey Hexa | Image Alt',
-          type: 'image/avif',
+          type: 'image/png',
         },
       ],
       locale: "en-US",
       type: "website",
     },
     twitter: {
-      card: "summary_large_image",
+      card: "summary",
       title: title,
       description: desc,
       creator: "@honeyhexa",
       handle: '@honeyhexa',
       site: '@honeyhexa',
-      cardType: 'summary_large_image',
+      cardType: 'summary',
     },
     appleWebApp: {
       title: title,
       statusBarStyle: "black-translucent",
-      startupImage: [ addToOrigin("/honey_hexa_og.avif")],
+      startupImage: [ imgUrl],
     },
     robots: {
       index: true,
