@@ -71,9 +71,9 @@ const generateDefaultMetaData = (o) => {
       siteName: title,
       images: [
         {
-          url: "/honey_hexa_og.avif",
-          width: 800,
-          height: 600,
+          url: addToOrigin("/honey_hexa_og.avif"),
+          alt: 'Honey Hexa Image Alt',
+          type: 'image/avif',
         },
       ],
       locale: "en-US",
@@ -84,7 +84,9 @@ const generateDefaultMetaData = (o) => {
       title: title,
       description: desc,
       creator: "@honeyhexa",
-      images: ["/honey_hexa_og.avif"],
+      handle: '@honeyhexa',
+      site: '@honeyhexa',
+      cardType: 'summary_large_image',
     },
     appleWebApp: {
       title: title,
