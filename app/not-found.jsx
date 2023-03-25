@@ -2,21 +2,20 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import {
   FooterSection,
-  ServicesSection,
 } from "@/components/misc";
 import { Page } from "@/components/page";
-import { SERVICES_PROPS } from "@/content/services";
 import { Rubik } from "next/font/google";
+import { METADATA_NOT_FOUND } from "@/content/misc";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
-export default function Home() {
+export const metadata = {...METADATA_NOT_FOUND};
+
+export default function Page404() {
   return (
     <Page className={rubik.className}>
       <Header />
-      <main className={rubik.className}>
-        <ServicesSection {...SERVICES_PROPS} />
-      </main>
+      {/* TODO: Page not found view */}
       <FooterSection />
       <Footer />
     </Page>

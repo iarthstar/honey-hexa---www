@@ -54,9 +54,9 @@ export function Footer() {
           <p className="flex flex-row mt-4">
             Made with&nbsp;
             <span className="text-red-500">
-              <Heart />
+              <Heart style={{ width: '12px'}} />
             </span>
-            &nbsp; by Ladies in Ahmedabad
+            &nbsp; by Women in Ahmedabad
           </p>
         </div>
       </PageContainer>

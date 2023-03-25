@@ -5,10 +5,13 @@ import {
 } from "@/components/misc";
 import { Page } from "@/components/page";
 import { Rubik } from "next/font/google";
+import { METADATA_CONTACT } from "@/content/misc";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
-export default function Page404() {
+export const metadata = { ...METADATA_CONTACT };
+
+export default function PageContact() {
   return (
     <Page className={rubik.className}>
       <Header />

@@ -1,3 +1,5 @@
+"use client";
+
 import { NAV_LINKS } from "@/content/misc";
 import Link from "next/link";
 import React, { useState } from "react";
