@@ -71,7 +71,7 @@ const generateDefaultMetaData = (o) => {
       siteName: title,
       images: [
         {
-          url: "/honey_hexa_og.avif",
+          url: addToOrigin("/honey_hexa_og.avif"),
           alt: 'Honey Hexa Image Alt',
           type: 'image/avif',
         },
