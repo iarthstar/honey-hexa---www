@@ -41,7 +41,7 @@ export const SOCIAL_LINKS = [
   { label: "INSTAGRAM", href: "https://instagram.com/honeyhexa" },
 ];
 
-const ORIGIN = "https://www.honeyhexa.com";
+const ORIGIN = "https://honeyhexa.com";
 const ROUTES = {
   ABOUT: "/about",
   SERVICES: "/services",
@@ -91,7 +91,7 @@ const generateDefaultMetaData = (o) => {
     appleWebApp: {
       title: title,
       statusBarStyle: "black-translucent",
-      startupImage: ["/honey_hexa_og.avif"],
+      startupImage: [ addToOrigin("/honey_hexa_og.avif")],
     },
     robots: {
       index: true,
