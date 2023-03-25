@@ -84,7 +84,9 @@ const generateDefaultMetaData = (o) => {
       title: title,
       description: desc,
       creator: "@honeyhexa",
-      images: ["/honey_hexa_og.avif"],
+      handle: '@honeyhexa',
+      site: '@honeyhexa',
+      cardType: 'summary_large_image',
     },
     appleWebApp: {
       title: title,
