@@ -71,7 +71,7 @@ const generateDefaultMetaData = (o) => {
       siteName: title,
       images: [
         {
-          url: "honey_hexa_og.avif",
+          url: "/honey_hexa_og.avif",
           width: 800,
           height: 600,
         },
@@ -84,12 +84,12 @@ const generateDefaultMetaData = (o) => {
       title: title,
       description: desc,
       creator: "@honeyhexa",
-      images: ["honey_hexa_og.avif"],
+      images: ["/honey_hexa_og.avif"],
     },
     appleWebApp: {
       title: title,
       statusBarStyle: "black-translucent",
-      startupImage: ["honey_hexa_og.avif"],
+      startupImage: ["/honey_hexa_og.avif"],
     },
     robots: {
       index: false,
