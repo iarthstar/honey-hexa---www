@@ -273,7 +273,7 @@ export const WorkSection = ({ title, list }) => (
     <SectionHeading heading={title} />
     <div className="backdrop-blur-xl bg-black border-white border p-4 md:p-24 flex flex-col gap-y-4 md:gap-y-24">
       {list.map((w) => (
-        <Link key={w.path} href={`/work/${w.path}`}>
+        <Link key={w.path} href={`/`}>
           <div
             className={`${unbounded.className} h-48 flex items-center justify-center overflow-x-hidden`}
           >
