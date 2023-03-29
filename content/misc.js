@@ -108,6 +108,7 @@ export const SOCIAL_LINKS = [
   { label: "BEHANCE", href: "https://behance.net/honeyhexa" },
   { label: "BENTO", href: "https://bento.me/honeyhexa" },
   { label: "READCV", href: "https://read.cv/honeyhexa" },
+  { label: "MEDIUM", href: "https://honeyhexa.medium.com" },
 ];
 
 const ORIGIN = "https://honeyhexa.com";
