@@ -13,6 +13,7 @@ import {
   Logo,
 } from "@/components/misc";
 import { PageContainer } from "./page-container";
+import { ICON_MEDIUM } from "./misc";
 
 const LOGO_MAP = {
   TWITTER: <ICON_TWITTER />,
@@ -21,6 +22,7 @@ const LOGO_MAP = {
   BEHANCE: <ICON_BEHANCE />,
   BENTO: <ICON_BENTO />,
   READCV: <ICON_READCV />,
+  MEDIUM: <ICON_MEDIUM />,
 };
 
 export function Footer() {
