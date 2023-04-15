@@ -1,13 +1,15 @@
+import { ArticleJsonLd } from "next-seo";
+import { Rubik } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { FooterSection } from "@/components/misc";
 import { Page } from "@/components/page";
-import { Rubik } from "next/font/google";
 
 import { allPosts } from "contentlayer/generated";
 import { getMDXComponent } from "next-contentlayer/hooks";
 import { PageContainer } from "@/components/page-container";
 import { SectionHeading } from "@/components/misc";
+import { addToOrigin } from "@/content/misc";
 import styles from "./page.module.scss";
 
 const rubik = Rubik({ subsets: ["latin"] });
@@ -30,13 +32,12 @@ export function generateMetadata({ params }) {
     return {};
   }
 
-  const url = process.env.NEXT_PUBLIC_APP_URL;
+  const ogUrl = addToOrigin("/meta/honey_hexa_og.png");
 
-  const ogUrl = "/public/meta/honey_hexa_og.png";
-
-  const title = post?.title ?? '';
-  const description = post?.description ?? '';
+  const title = post?.title ?? "";
+  const description = post?.description ?? "";
   const authors = post?.authors ?? [];
+  const url = addToOrigin(`/blog${post?._raw?.flattenedPath}`);
 
   return {
     title,
@@ -48,7 +49,7 @@ export function generateMetadata({ params }) {
       title,
       description,
       type: "article",
-      url: `https://honeyhexa.com/blog${post?._raw?.flattenedPath}`,
+      url,
       images: [
         {
           url: ogUrl,
@@ -67,14 +68,36 @@ export function generateMetadata({ params }) {
   };
 }
 
+function generateArticleJsonLdProps(post) {
+  const ogUrl = addToOrigin("/meta/honey_hexa_og.png");
+
+  const title = post?.title ?? "";
+  const description = post?.description ?? "";
+  const authors = post?.authors ?? [];
+  const url = addToOrigin(`/blog${post?._raw?.flattenedPath}`);
+
+  return {
+    type: 'NewsArticle',
+    url,
+    title,
+    description,
+    datePublished: post.date,
+    authorName: ["Arth K. Gajjar", "Honey Hexa"],
+    publisherName: "Honey Hexa",
+    isAccessibleForFree: true,
+    images: [ogUrl],
+  };
+}
+
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
 
 export default function PageBlog({ params }) {
   const post = getPostFromParams(params);
+  const articleJsonLdProps = generateArticleJsonLdProps(post);
 
   if (!post) {
-    notFound()
+    notFound();
   }
 
   const Content = getMDXComponent(post.body.code);
@@ -82,6 +105,7 @@ export default function PageBlog({ params }) {
   return (
     <Page className={rubik.className}>
       <Header />
+      <ArticleJsonLd {...articleJsonLdProps} />
       <article>
         <PageContainer>
           <SectionHeading heading={post.title} />
