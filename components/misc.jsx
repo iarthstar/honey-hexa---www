@@ -7,6 +7,23 @@ import Link from "next/link";
 const rubik = Rubik({ subsets: ["latin"] });
 const unbounded = Unbounded({ subsets: ["latin"] });
 
+export const ICON_ARROW_LEFT = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className="w-6 h-6"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
+    />
+  </svg>
+);
+
 export const ICON_TWITTER = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -172,8 +189,17 @@ export const Logo = () => (
   </Link>
 );
 
-export const SectionHeading = ({ heading }) => (
-  <div className="border-white pt-36 pb-12 md:pt-72 md:pb-24">
+export const SectionHeading = ({ heading, goBackUrl }) => (
+  <div className="border-white flex flex-col pt-36 pb-12 md:pt-28 md:pb-24">
+    <Link
+      className={`flex flex-row gap-x-2 ${goBackUrl ? "visible" : "invisible"}`}
+      href={goBackUrl ?? "/"}
+    >
+      <ICON_ARROW_LEFT />
+      BACK
+    </Link>
+    <span className="md:h-20 w-1" />
+
     <TextShadowGradient>
       <h3 className="text-4xl md:text-7xl  text-gradient">
         <span className={unbounded.className}>{heading}</span>

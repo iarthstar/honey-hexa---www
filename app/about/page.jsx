@@ -17,7 +17,7 @@ export default function PageAbout() {
       <Header />
       <main className={rubik.className}>
         <PageContainer>
-          <SectionHeading heading="About Us" />
+          <SectionHeading heading="About Us" goBackUrl="/" />
         </PageContainer>
         <AboutSection {...ABOUT_PROPS} />
       </main>

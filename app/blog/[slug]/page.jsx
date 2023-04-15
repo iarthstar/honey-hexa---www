@@ -84,7 +84,7 @@ export default function PageBlog({ params }) {
       <Header />
       <article>
         <PageContainer>
-          <SectionHeading heading={post.title} />
+          <SectionHeading heading={post.title} goBackUrl="/blog" />
           <div className={styles.content}>
             <Content />
           </div>
