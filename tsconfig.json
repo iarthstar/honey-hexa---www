@@ -21,7 +21,8 @@
     "strictNullChecks": true,
     "paths": {
       "@/components/*": ["/components/*"],
-      "@/content/*": ["/content/*"]
+      "@/content/*": ["/content/*"],
+      "contentlayer/generated": ["./.contentlayer/generated"],
     }
   },
   "include": [
@@ -30,7 +31,8 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.js",
-    "**/*.jsx",
+    "**/*.jsx", "next.config.mjs",
+    ".contentlayer/generated",
   ],
   "exclude": ["node_modules"]
 }
