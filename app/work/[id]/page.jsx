@@ -49,7 +49,7 @@ export default function PageWork({ params }) {
       <Header />
       <main className={rubik.className}>
         <PageContainer>
-          <SectionHeading heading={title} />
+          <SectionHeading heading={title} goBackUrl="/work" />
         </PageContainer>
         <WorkShowcase assets={assets} />
       </main>

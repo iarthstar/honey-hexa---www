@@ -22,7 +22,7 @@ export default function PageBlog() {
       <Header />
       <main>
         <PageContainer>
-          <SectionHeading heading="Blog" />
+          <SectionHeading heading="Blog" goBackUrl="/" />
           <div className="bg-black border-white border p-4 md:p-24 flex flex-col gap-y-8">
             {allPosts.map((w) => (
               <Link

@@ -46,7 +46,7 @@ export function Header() {
               <Logo />
               <Hamburger />
             </div>
-            <ul className="animate-fade-in mt-24 md:mt-48 flex flex-col border-t">
+            <ul className="animate-fade-in mt-16 md:mt-24 flex flex-col border-t">
               {NAV_LINKS.map((o) => (
                 <Link key={o.href} href={o.href}>
                   <div className="h-24 border-b flex items-center">
