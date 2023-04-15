@@ -97,6 +97,7 @@ export const WORKS = [
 export const NAV_LINKS = [
   { label: "Services", href: "/services" },
   { label: "Work", href: "/work" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -117,6 +118,7 @@ const ROUTES = {
   SERVICES: "/services",
   WORK: "/work",
   CONTACT: "/contact",
+  BLOG: "/blog",
 };
 const addToOrigin = (path = "") => `${ORIGIN}${path}`;
 

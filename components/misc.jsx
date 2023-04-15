@@ -283,7 +283,7 @@ export const ServicesSection = ({ list, title }) => (
 export const WorkSection = ({ title, list }) => (
   <PageContainer>
     <SectionHeading heading={title} />
-    <div className="backdrop-blur-xl bg-black border-white border p-4 md:p-24 flex flex-col gap-y-4 md:gap-y-24">
+    <div className="bg-black border-white border p-4 md:p-24 flex flex-col gap-y-4 md:gap-y-24">
       {list.map((w) => (
         <Link key={w.path} href={`/`}>
           <div
