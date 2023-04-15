@@ -120,7 +120,7 @@ const ROUTES = {
   CONTACT: "/contact",
   BLOG: "/blog",
 };
-const addToOrigin = (path = "") => `${ORIGIN}${path}`;
+export const addToOrigin = (path = "") => `${ORIGIN}${path}`;
 
 // ------------------------------------------------------ METADATA ------ START
 
