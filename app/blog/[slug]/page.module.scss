@@ -16,7 +16,7 @@
         @apply text-base mt-4 mb-2;
     }
     p {
-        @apply text-justify text-base mb-2;
+        @apply text-base mb-2;
     }
 
     a {
@@ -24,7 +24,7 @@
     }
 
     ol, ul {
-        @apply text-justify list-outside pl-4 text-base;
+        @apply list-outside pl-4 text-base;
     }
 
     ol { @apply list-decimal }
