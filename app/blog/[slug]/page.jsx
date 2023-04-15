@@ -1,4 +1,3 @@
-import { ArticleJsonLd } from "next-seo";
 import { Rubik } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
@@ -68,33 +67,11 @@ export function generateMetadata({ params }) {
   };
 }
 
-function generateArticleJsonLdProps(post) {
-  const ogUrl = addToOrigin("/meta/honey_hexa_og.png");
-
-  const title = post?.title ?? "";
-  const description = post?.description ?? "";
-  const authors = post?.authors ?? [];
-  const url = addToOrigin(`/blog${post?._raw?.flattenedPath}`);
-
-  return {
-    type: 'NewsArticle',
-    url,
-    title,
-    description,
-    datePublished: post.date,
-    authorName: ["Arth K. Gajjar", "Honey Hexa"],
-    publisherName: "Honey Hexa",
-    isAccessibleForFree: true,
-    images: [ogUrl],
-  };
-}
-
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
 
 export default function PageBlog({ params }) {
   const post = getPostFromParams(params);
-  const articleJsonLdProps = generateArticleJsonLdProps(post);
 
   if (!post) {
     notFound();
@@ -105,7 +82,6 @@ export default function PageBlog({ params }) {
   return (
     <Page className={rubik.className}>
       <Header />
-      <ArticleJsonLd {...articleJsonLdProps} />
       <article>
         <PageContainer>
           <SectionHeading heading={post.title} />
