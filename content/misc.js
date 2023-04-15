@@ -211,6 +211,12 @@ export const METADATA_WORK = generateDefaultMetaData({
   path: ROUTES.WORK,
 });
 
+export const METADATA_BLOG = generateDefaultMetaData({
+  title: "Blog",
+  desc: "Our blog covers a wide range of topics, from digital marketing and branding to web design and development, and everything in between. HoneyHexa's informative articles, case studies, and best practices that can help you make informed decisions and stay ahead of the curve in today's fast-paced business landscape.",
+  path: ROUTES.BLOG,
+});
+
 export const METADATA_NOT_FOUND = generateDefaultMetaData({
   title: "404",
   desc: "Book Now, Free consultation for your digital needs, we love to connect with our partners and help them with their way forward.",

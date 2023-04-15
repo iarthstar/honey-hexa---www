@@ -8,10 +8,13 @@ import { Unbounded } from "next/font/google";
 import { allPosts } from "contentlayer/generated";
 import { PageContainer } from "@/components/page-container";
 import { SectionHeading } from "@/components/misc";
+import { METADATA_BLOG } from "@/content/misc";
 import Link from "next/link";
 
 const rubik = Rubik({ subsets: ["latin"] });
 const unbounded = Unbounded({ subsets: ["latin"] });
+
+export const metadata = { ...METADATA_BLOG };
 
 export default function PageBlog() {
   return (
