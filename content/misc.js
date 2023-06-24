@@ -23,7 +23,7 @@ export const SERVICES = [
 
 export const WORKS = [
   {
-    path: "kuber-creations",
+    path: "/",
     content: {
       title: "Kuber Creations",
       tags: [],
@@ -37,7 +37,7 @@ export const WORKS = [
     },
   },
   {
-    path: "netra-constuctions",
+    path: "/",
     content: {
       title: "Netra Constructions",
       tags: [],
@@ -51,7 +51,7 @@ export const WORKS = [
     },
   },
   {
-    path: "harshid-engravers",
+    path: "/",
     content: {
       title: "Harshid Engravers",
       tags: [],
@@ -65,7 +65,7 @@ export const WORKS = [
     },
   },
   {
-    path: "ajk-masala",
+    path: "/",
     content: {
       title: "AJK Masala",
       tags: [],
@@ -79,9 +79,23 @@ export const WORKS = [
     },
   },
   {
-    path: "ganesh-valves",
+    path: "/",
     content: {
       title: "Ganesh Valves",
+      tags: [],
+      assets: [
+        "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173479679-eecdb747a5bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173479711-d47c29e93633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173480513-8e2d4f583b86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1679173479678-eed90dba2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+      ],
+    },
+  },
+  {
+    path: "https://www.indobright.co.in",
+    content: {
+      title: "Indobright Services",
       tags: [],
       assets: [
         "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",

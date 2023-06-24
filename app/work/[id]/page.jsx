@@ -13,7 +13,7 @@ import Image from "next/image";
 const rubik = Rubik({ subsets: ["latin"] });
 
 export function generateStaticParams() {
-  const paths = WORKS.map((o) => ({ id: o.path }));
+  const paths = []; // WORKS.map((o) => ({ id: o.path }));
   return paths;
 }
 
