@@ -2,6 +2,9 @@
 
 Official Honey Hexa website : [Production](https://honeyhexa.com)
 
+## Repobeats
+![Alt](https://repobeats.axiom.co/api/embed/48c53890073225bae688f6945c399cc9905f0065.svg "Repobeats analytics image")
+
 ## honey-hexa--www
 
 - **Framework**: [Next.js](https://nextjs.org/)
