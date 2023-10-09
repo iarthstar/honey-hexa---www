@@ -23,49 +23,57 @@ export const SERVICES = [
 
 export const WORKS = [
   {
-    path: "/",
+    path: "https://serp-one.vercel.app/",
     content: {
-      title: "Kuber Creations",
+      title: "SERP ONE",
       tags: [],
-      assets: [
-        "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173479679-eecdb747a5bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173479711-d47c29e93633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173480513-8e2d4f583b86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173479678-eed90dba2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-      ],
+      assets: [],
     },
   },
+  // {
+  //   path: "/",
+  //   content: {
+  //     title: "Kuber Creations",
+  //     tags: [],
+  //     assets: [
+  //       "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //       "https://images.unsplash.com/photo-1679173479679-eecdb747a5bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //       "https://images.unsplash.com/photo-1679173479711-d47c29e93633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //       "https://images.unsplash.com/photo-1679173480513-8e2d4f583b86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //       "https://images.unsplash.com/photo-1679173479678-eed90dba2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //     ],
+  //   },
+  // },
+  // {
+  //   path: "/",
+  //   content: {
+  //     title: "Netra Constructions",
+  //     tags: [],
+  //     assets: [
+  //       "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //       "https://images.unsplash.com/photo-1679173479679-eecdb747a5bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //       "https://images.unsplash.com/photo-1679173479711-d47c29e93633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //       "https://images.unsplash.com/photo-1679173480513-8e2d4f583b86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //       "https://images.unsplash.com/photo-1679173479678-eed90dba2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //     ],
+  //   },
+  // },
+  // {
+  //   path: "/",
+  //   content: {
+  //     title: "Harshid Engravers",
+  //     tags: [],
+  //     assets: [
+  //       "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //       "https://images.unsplash.com/photo-1679173479679-eecdb747a5bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //       "https://images.unsplash.com/photo-1679173479711-d47c29e93633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //       "https://images.unsplash.com/photo-1679173480513-8e2d4f583b86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //       "https://images.unsplash.com/photo-1679173479678-eed90dba2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  //     ],
+  //   },
+  // },
   {
-    path: "/",
-    content: {
-      title: "Netra Constructions",
-      tags: [],
-      assets: [
-        "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173479679-eecdb747a5bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173479711-d47c29e93633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173480513-8e2d4f583b86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173479678-eed90dba2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-      ],
-    },
-  },
-  {
-    path: "/",
-    content: {
-      title: "Harshid Engravers",
-      tags: [],
-      assets: [
-        "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173479679-eecdb747a5bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173479711-d47c29e93633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173480513-8e2d4f583b86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173479678-eed90dba2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-      ],
-    },
-  },
-  {
-    path: "/",
+    path: "https://www.ajkmasala.com",
     content: {
       title: "AJK Masala",
       tags: [],
@@ -79,7 +87,7 @@ export const WORKS = [
     },
   },
   {
-    path: "/",
+    path: "https://dev-ganeshvalves.vercel.app/",
     content: {
       title: "Ganesh Valves",
       tags: [],
