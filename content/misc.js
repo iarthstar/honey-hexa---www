@@ -134,7 +134,7 @@ export const SOCIAL_LINKS = [
   { label: "MEDIUM", href: "https://honeyhexa.medium.com" },
 ];
 
-const ORIGIN = "https://honeyhexa.com";
+const ORIGIN = "https://www.honeyhexa.com";
 const ROUTES = {
   ABOUT: "/about",
   SERVICES: "/services",
