@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://honeyhexa.com',
+  siteUrl: 'https://www.honeyhexa.com',
   generateRobotsTxt: true,
 };
 

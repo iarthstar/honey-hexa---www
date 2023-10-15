@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://honeyhexa.com
+Host: https://www.honeyhexa.com
 
 # Sitemaps
-Sitemap: https://honeyhexa.com/sitemap.xml
+Sitemap: https://www.honeyhexa.com/sitemap.xml

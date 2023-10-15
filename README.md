@@ -1,6 +1,6 @@
 # Honey Hexa Website
 
-Official Honey Hexa website : [Production](https://honeyhexa.com)
+Official Honey Hexa website : [Production](https://www.honeyhexa.com)
 
 ## Repobeats
 ![Alt](https://repobeats.axiom.co/api/embed/48c53890073225bae688f6945c399cc9905f0065.svg "Repobeats analytics image")
@@ -29,3 +29,4 @@ cd honey-hexa--wwww
 yarn install
 yarn dev
 ```
+
