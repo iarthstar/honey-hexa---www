@@ -30,6 +30,14 @@ export const WORKS = [
       assets: [],
     },
   },
+  {
+    path: "https://netra-construction.vercel.app/",
+    content: {
+      title: "NETRA CONSTRUCTION",
+      tags: [],
+      assets: [],
+    },
+  },
   // {
   //   path: "/",
   //   content: {
@@ -75,7 +83,7 @@ export const WORKS = [
   {
     path: "https://www.ajkmasala.com",
     content: {
-      title: "AJK Masala",
+      title: "AJK MASALA",
       tags: [],
       assets: [
         "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
@@ -87,9 +95,9 @@ export const WORKS = [
     },
   },
   {
-    path: "https://dev-ganeshvalves.vercel.app/",
+    path: "https://ganeshvalves.vercel.app/",
     content: {
-      title: "Ganesh Valves",
+      title: "GANESH VALVES",
       tags: [],
       assets: [
         "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
@@ -103,7 +111,7 @@ export const WORKS = [
   {
     path: "https://www.indobright.co.in",
     content: {
-      title: "Indobright Services",
+      title: "INDOBRIGHT SERVICES",
       tags: [],
       assets: [
         "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
