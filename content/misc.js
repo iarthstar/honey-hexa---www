@@ -23,6 +23,22 @@ export const SERVICES = [
 
 export const WORKS = [
   {
+    path: "https://netra-construction.vercel.app/",
+    content: {
+      title: "NETRA CONSTRUCTION",
+      tags: [],
+      assets: [],
+    },
+  },
+  {
+    path: "https://juspay-www.vercel.app",
+    content: {
+      title: "JUSPAY REDESIGN",
+      tags: [],
+      assets: [],
+    },
+  },
+  {
     path: "https://serp-one.vercel.app/",
     content: {
       title: "SERP ONE",
@@ -31,67 +47,11 @@ export const WORKS = [
     },
   },
   {
-    path: "https://netra-construction.vercel.app/",
+    path: "https://phvalues.vercel.app",
     content: {
-      title: "NETRA CONSTRUCTION",
+      title: "PARAM HANS VALUES",
       tags: [],
       assets: [],
-    },
-  },
-  // {
-  //   path: "/",
-  //   content: {
-  //     title: "Kuber Creations",
-  //     tags: [],
-  //     assets: [
-  //       "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-  //       "https://images.unsplash.com/photo-1679173479679-eecdb747a5bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-  //       "https://images.unsplash.com/photo-1679173479711-d47c29e93633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-  //       "https://images.unsplash.com/photo-1679173480513-8e2d4f583b86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-  //       "https://images.unsplash.com/photo-1679173479678-eed90dba2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-  //     ],
-  //   },
-  // },
-  // {
-  //   path: "/",
-  //   content: {
-  //     title: "Netra Constructions",
-  //     tags: [],
-  //     assets: [
-  //       "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-  //       "https://images.unsplash.com/photo-1679173479679-eecdb747a5bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-  //       "https://images.unsplash.com/photo-1679173479711-d47c29e93633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-  //       "https://images.unsplash.com/photo-1679173480513-8e2d4f583b86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-  //       "https://images.unsplash.com/photo-1679173479678-eed90dba2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-  //     ],
-  //   },
-  // },
-  // {
-  //   path: "/",
-  //   content: {
-  //     title: "Harshid Engravers",
-  //     tags: [],
-  //     assets: [
-  //       "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-  //       "https://images.unsplash.com/photo-1679173479679-eecdb747a5bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-  //       "https://images.unsplash.com/photo-1679173479711-d47c29e93633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-  //       "https://images.unsplash.com/photo-1679173480513-8e2d4f583b86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-  //       "https://images.unsplash.com/photo-1679173479678-eed90dba2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-  //     ],
-  //   },
-  // },
-  {
-    path: "https://www.ajkmasala.com",
-    content: {
-      title: "AJK MASALA",
-      tags: [],
-      assets: [
-        "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173479679-eecdb747a5bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173479711-d47c29e93633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173480513-8e2d4f583b86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173479678-eed90dba2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-      ],
     },
   },
   {
@@ -99,13 +59,23 @@ export const WORKS = [
     content: {
       title: "GANESH VALVES",
       tags: [],
-      assets: [
-        "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173479679-eecdb747a5bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173479711-d47c29e93633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173480513-8e2d4f583b86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173479678-eed90dba2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-      ],
+      assets: [],
+    },
+  },
+  {
+    path: "https://www.ajkmasala.com",
+    content: {
+      title: "AJK MASALA",
+      tags: [],
+      assets: [],
+    },
+  },
+  {
+    path: "https://rapyuta-robotics.vercel.app/",
+    content: {
+      title: "RAPYUTA ROBOTICS REDESIGN",
+      tags: [],
+      assets: [],
     },
   },
   {
@@ -113,13 +83,7 @@ export const WORKS = [
     content: {
       title: "INDOBRIGHT SERVICES",
       tags: [],
-      assets: [
-        "https://images.unsplash.com/photo-1679173740606-26220981aabb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173479679-eecdb747a5bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173479711-d47c29e93633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173480513-8e2d4f583b86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1679173479678-eed90dba2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
-      ],
+      assets: [],
     },
   },
 ];
