@@ -36,7 +36,7 @@ export function Footer() {
           <ul className="flex flex-col gap-y-2 md:flex-row md:gap-x-8">
             {NAV_LINKS.map((o) => (
               <li key={o.href}>
-                <Link href={o.href} className="text-gray-400 hover:text-white">
+                <Link href={o.href} className="text-neutral-400 hover:text-white">
                   {o.label}
                 </Link>
               </li>
@@ -58,8 +58,8 @@ export function Footer() {
             ))}
           </ul>
         </div>
-        <div className="border-t text-sm text-gray-100 flex flex-col md:flex-row md:justify-between md:items-center mt-10 h-24">
-          <p className="mt-4">2023 Honey Hexa, all rights reserved.</p>
+        <div className="border-t text-sm text-neutral-400 flex flex-col md:flex-row md:justify-between md:items-center mt-10 h-24">
+          <p className="mt-4">© 2023 <span className="text-white">Honey Hexa</span>. All Rights Reserved.</p>
           <p className="flex flex-row mt-4">
             Made with&nbsp;
             <span className="text-red-500">
