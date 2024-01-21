@@ -27,7 +27,6 @@ export default function HomePage() {
               className="w-full aspect-[16/10] object-cover"
             >
               <source src="/videos/showcase.mp4" type="video/mp4" />
-              <source src="/videos/showcase.webm" type="video/webm" />
             </video>
           </div>
 
@@ -50,7 +49,6 @@ export default function HomePage() {
                 className="w-full aspect-[16/9] object-cover"
               >
                 <source src="/videos/work_1.mp4" type="video/mp4" />
-                <source src="/videos/work_1.webm" type="video/webm" />
               </video>
             </div>
           </div>
@@ -72,7 +70,6 @@ export default function HomePage() {
                 className="w-full aspect-[16/9] object-cover"
               >
                 <source src="/videos/work_2.mp4" type="video/mp4" />
-                <source src="/videos/work_2.webm" type="video/webm" />
               </video>
             </div>
           </div>
@@ -94,7 +91,6 @@ export default function HomePage() {
                 className="w-full aspect-[16/9] object-cover"
               >
                 <source src="/videos/work_3.mp4" type="video/mp4" />
-                <source src="/videos/work_3.webm" type="video/webm" />
               </video>
             </div>
           </div>
@@ -118,7 +114,6 @@ export default function HomePage() {
                 className="w-full aspect-[16/9] object-cover"
               >
                 <source src="/videos/work_4.mp4" type="video/mp4" />
-                <source src="/videos/work_4.webm" type="video/webm" />
               </video>
             </div>
           </div>
@@ -142,7 +137,6 @@ export default function HomePage() {
                 className="w-full aspect-[16/9] object-cover"
               >
                 <source src="/videos/work_5.mp4" type="video/mp4" />
-                <source src="/videos/work_5.webm" type="video/webm" />
               </video>
             </div>
           </div>
@@ -164,7 +158,6 @@ export default function HomePage() {
                 className="w-full aspect-[16/9] object-cover"
               >
                 <source src="/videos/work_6.mp4" type="video/mp4" />
-                <source src="/videos/work_6.webm" type="video/webm" />
               </video>
             </div>
           </div>
