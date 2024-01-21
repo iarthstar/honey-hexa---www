@@ -13,7 +13,10 @@ export default function HomePage() {
         </h1>
       </header>
       <main>
-        <section aria-label="work" className="grid grid-cols-1 gap-16 md:gap-32">
+        <section
+          aria-label="work"
+          className="grid grid-cols-1 gap-16 md:gap-32"
+        >
           <div
             aria-label="showcase"
             className="border rounded-[1rem] shadow overflow-hidden"
@@ -25,6 +28,7 @@ export default function HomePage() {
               muted
               playsInline
               className="w-full aspect-[16/10] object-cover"
+              poster="/images/showcase_poster_1.png"
             >
               <source src="/videos/showcase.mp4" type="video/mp4" />
             </video>
@@ -47,6 +51,7 @@ export default function HomePage() {
                 muted
                 playsInline
                 className="w-full aspect-[16/9] object-cover"
+                poster="/images/work_poster_1.png"
               >
                 <source src="/videos/work_1.mp4" type="video/mp4" />
               </video>
@@ -68,8 +73,9 @@ export default function HomePage() {
                 muted
                 playsInline
                 className="w-full aspect-[16/9] object-cover"
+                poster="/images/work_poster_2.png"
               >
-                <source src="/videos/work_2.mp4" type="video/mp4" />
+                <source src="/videos/work_webm_2.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -89,8 +95,9 @@ export default function HomePage() {
                 muted
                 playsInline
                 className="w-full aspect-[16/9] object-cover"
+                poster="/images/work_poster_3.png"
               >
-                <source src="/videos/work_3.mp4" type="video/mp4" />
+                <source src="/videos/work_webm_3.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -112,8 +119,9 @@ export default function HomePage() {
                 muted
                 playsInline
                 className="w-full aspect-[16/9] object-cover"
+                poster="/images/work_poster_4.png"
               >
-                <source src="/videos/work_4.mp4" type="video/mp4" />
+                <source src="/videos/work_webm_4.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -135,8 +143,9 @@ export default function HomePage() {
                 muted
                 playsInline
                 className="w-full aspect-[16/9] object-cover"
+                poster="/images/work_poster_5.png"
               >
-                <source src="/videos/work_5.mp4" type="video/mp4" />
+                <source src="/videos/work_webm_5.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -156,8 +165,9 @@ export default function HomePage() {
                 muted
                 playsInline
                 className="w-full aspect-[16/9] object-cover"
+                poster="/images/work_poster_6.png"
               >
-                <source src="/videos/work_6.mp4" type="video/mp4" />
+                <source src="/videos/work_webm_6.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
