@@ -75,7 +75,7 @@ export default function HomePage() {
                 className="w-full aspect-[16/9] object-cover"
                 poster="/images/work_poster_2.png"
               >
-                <source src="/videos/work_webm_2.mp4" type="video/mp4" />
+                <source src="/videos/work_2.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function HomePage() {
                 className="w-full aspect-[16/9] object-cover"
                 poster="/images/work_poster_3.png"
               >
-                <source src="/videos/work_webm_3.mp4" type="video/mp4" />
+                <source src="/videos/work_3.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -121,7 +121,7 @@ export default function HomePage() {
                 className="w-full aspect-[16/9] object-cover"
                 poster="/images/work_poster_4.png"
               >
-                <source src="/videos/work_webm_4.mp4" type="video/mp4" />
+                <source src="/videos/work_4.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -145,7 +145,7 @@ export default function HomePage() {
                 className="w-full aspect-[16/9] object-cover"
                 poster="/images/work_poster_5.png"
               >
-                <source src="/videos/work_webm_5.mp4" type="video/mp4" />
+                <source src="/videos/work_5.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -167,7 +167,7 @@ export default function HomePage() {
                 className="w-full aspect-[16/9] object-cover"
                 poster="/images/work_poster_6.png"
               >
-                <source src="/videos/work_webm_6.mp4" type="video/mp4" />
+                <source src="/videos/work_6.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
