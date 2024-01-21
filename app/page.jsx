@@ -1,5 +1,8 @@
 import { PageContainer } from "@/components/page-container";
-import TallyForm from "../components/tally-form";
+import TallyForm from "@/components/tally-form";
+import { METADATA_HOME } from "@/content/misc";
+
+export const metadata = { ...METADATA_HOME };
 
 export default function HomePage() {
   return (
