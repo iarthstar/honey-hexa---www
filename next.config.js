@@ -27,8 +27,8 @@ const nextConfig = {
 
 // https://nextjs.org/docs/advanced-features/security-headers
 const ContentSecurityPolicy = `
-    default-src 'self' vercel.live https://tally.so;
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.getkoala.com https://tally.so https://www.googletagmanager.com https://eu.umami.is https://app.posthog.com https://www.clarity.ms cdn.vercel-insights.com vercel.live;
+    default-src 'self' vercel.live https://plug-platform.devrev.ai https://tally.so;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://plug-platform.devrev.ai https://cdn.getkoala.com https://tally.so https://www.googletagmanager.com https://cloud.umami.is https://eu.umami.is https://app.posthog.com https://www.clarity.ms cdn.vercel-insights.com vercel.live;
     style-src 'self' 'unsafe-inline';
     img-src * blob: data:;
     media-src 'self';

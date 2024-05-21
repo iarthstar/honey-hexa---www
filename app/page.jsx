@@ -1,6 +1,7 @@
 import { PageContainer } from "@/components/page-container";
 import TallyForm from "@/components/tally-form";
 import { METADATA_HOME } from "@/content/misc";
+import PLuG from "@/components/plug";
 
 export const metadata = { ...METADATA_HOME };
 
@@ -173,7 +174,7 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-      <TallyForm />
+      <PLuG />
       <footer>
         <p className="py-8 text-gray-500 text-sm text-center">
           &copy; 2024 Honey Hexa
