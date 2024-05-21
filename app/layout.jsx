@@ -15,9 +15,7 @@ export default function RootLayout({
       <body>
         {children}
         <Analytics />
-        {process.env.VERCEL_ENV === "production" ? (
-          <GoogleTagManager gtmId="GTM-PZN7WMHL" />
-        ) : null}
+        <GoogleTagManager gtmId="GTM-PZN7WMHL" />
       </body>
     </html>
   );
