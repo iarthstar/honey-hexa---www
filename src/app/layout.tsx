@@ -40,7 +40,7 @@ export default function RootLayout({
         {children}
         <Analytics />
         <SpeedInsights />
-        <GoogleTagManager gtmId="GTM-PZN7WMHL" />
+        {process.env.NEXT_PUBLIC_VERCEL_ENV === "production" ? <GoogleTagManager gtmId="GTM-PZN7WMHL" /> : null}
       </body>
     </html>
   );
