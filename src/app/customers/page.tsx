@@ -5,6 +5,8 @@ import Link from 'next/link';
 import React from 'react'
 import Page from '@/components/templates/page';
 import HeroHeadline from '@/components/molecules/hero-headline';
+import { Metadata } from 'next';
+import { ORIGIN } from '@/constants';
 
 const CUSTOMERS = [
   { label: "Netra Construction" },
@@ -16,14 +18,24 @@ const CUSTOMERS = [
   { label: "Harshid Engineering" },
 ]
 
+export const metadata: Metadata = {
+  title: "Customers -- Our Case Studies | Honey Hexa",
+  description: "Discover the latest in AI-driven strategies, cutting-edge technology, and innovative solutions designed to elevate your business to new heights.",
+  metadataBase: new URL(ORIGIN),
+  openGraph: {
+    images: ['/og-image.png'],
+  },
+};
+
+
 const PageCustomers = async () => {
   return (
     <Page>
 
       {/* BODY */}
       <HeroHeadline
-        label={<><FileTextIcon className="w-4 h-4" /> CASE STUDIES</>}
-        title={<>our CUSTOMERS&nbsp;</>}
+        label={<><FileTextIcon className="w-4 h-4" /> Customers</>}
+        title={<>our Case Studies&nbsp;</>}
         description={<>Discover the latest in AI-driven strategies, cutting-edge technology, and innovative solutions designed to elevate your business to new heights.</>}
       />
       <div className="bg-black">

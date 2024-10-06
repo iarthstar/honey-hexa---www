@@ -185,7 +185,7 @@ export const SOLUTIONS = [
 
 export const RESOURCES = [
   { label: "Blog", value: "blog", description: "Learn about tech." },
-  { label: "News", value: "news", description: "Learn about our progress." },
+  // { label: "News", value: "news", description: "Learn about our progress." },
   {
     label: "Case Studies",
     value: "customers",

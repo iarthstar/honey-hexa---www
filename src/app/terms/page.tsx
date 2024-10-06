@@ -4,6 +4,17 @@ import Link from 'next/link'
 import React from 'react'
 import Page from '@/components/templates/page'
 import { Text } from '@/components/atoms/text'
+import { Metadata } from 'next'
+import { ORIGIN } from '@/constants'
+
+export const metadata: Metadata = {
+  title: "Terms -- Our legal conditions | Honey Hexa",
+  description: "We serve only for lawful purposes and in accordance with all applicable laws and regulations.",
+  metadataBase: new URL(ORIGIN),
+  openGraph: {
+    images: ['/og-image.png'],
+  },
+};
 
 const PagePrivacy = () => {
   return (
@@ -37,36 +48,36 @@ const PagePrivacy = () => {
           </ul>
 
 
-        <h2>4. Intellectual Property</h2>
-        <p>All content and materials on our website and services, including but not limited to text, graphics, logos, and software, are the property of Honey Hexa or its licensors and are protected by intellectual property laws. You may not use, reproduce, or distribute any content without our prior written consent.</p>
+          <h2>4. Intellectual Property</h2>
+          <p>All content and materials on our website and services, including but not limited to text, graphics, logos, and software, are the property of Honey Hexa or its licensors and are protected by intellectual property laws. You may not use, reproduce, or distribute any content without our prior written consent.</p>
 
 
 
-        <h2>5. Limitation of Liability</h2>
-        <p>To the fullest extent permitted by law, Honey Hexa shall not be liable for any indirect, incidental, consequential, or punitive damages arising out of or in connection with your use of our services. Our total liability for any claim arising out of these Terms of Service shall be limited to the amount paid by you for the specific service giving rise to the claim.</p>
+          <h2>5. Limitation of Liability</h2>
+          <p>To the fullest extent permitted by law, Honey Hexa shall not be liable for any indirect, incidental, consequential, or punitive damages arising out of or in connection with your use of our services. Our total liability for any claim arising out of these Terms of Service shall be limited to the amount paid by you for the specific service giving rise to the claim.</p>
 
 
 
-        <h2>6. Indemnification</h2>
-        <p>You agree to indemnify, defend, and hold harmless Honey Hexa and its affiliates, officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable attorney fees, arising out of or related to your use of our services or any violation of these Terms of Service.</p>
+          <h2>6. Indemnification</h2>
+          <p>You agree to indemnify, defend, and hold harmless Honey Hexa and its affiliates, officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable attorney fees, arising out of or related to your use of our services or any violation of these Terms of Service.</p>
 
 
 
-        <h2>7. Changes to Terms</h2>
-        <p>We may update these Terms of Service from time to time. Any changes will be effective when we post the revised Terms of Service on our website. Your continued use of our services after such changes constitutes your acceptance of the new Terms of Service.</p>
+          <h2>7. Changes to Terms</h2>
+          <p>We may update these Terms of Service from time to time. Any changes will be effective when we post the revised Terms of Service on our website. Your continued use of our services after such changes constitutes your acceptance of the new Terms of Service.</p>
 
 
 
-        <h2>8. Governing Law</h2>
-        <p>These Terms of Service shall be governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of law principles.</p>
+          <h2>8. Governing Law</h2>
+          <p>These Terms of Service shall be governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of law principles.</p>
 
 
 
-        <h2>9. Contact Us</h2>
-        <p>If you have any questions about these Terms of Service, please contact us at:</p>
-        <p><strong>Email:</strong> support@honeyhexa.com</p>
+          <h2>9. Contact Us</h2>
+          <p>If you have any questions about these Terms of Service, please contact us at:</p>
+          <p><strong>Email:</strong> support@honeyhexa.com</p>
 
-      </div>
+        </div>
       </div>
 
     </Page>

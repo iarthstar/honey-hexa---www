@@ -28,3 +28,10 @@ export async function getArticleFromSlug(slug: string) {
   );
   return article;
 }
+
+export async function getArticleSlugs() {
+  const articles = await client.fetch(
+    '*[_type == "article"]{  "slug": slug.current, _updatedAt }'
+  );
+  return articles;
+}

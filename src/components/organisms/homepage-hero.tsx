@@ -19,7 +19,7 @@ const marqueeItems = [
 const HomepageHero = () => {
   return (
     <div className="bg-gradient-to-b from-black via-blue-800 to-blue-300 border-0 rounded-b-[4rem] overflow-hidden">
-      <PageContainer className="flex flex-col justify-center items-center h-96 sm:mt-32 sm:mb-24">
+      <PageContainer className="flex flex-col justify-center items-center h-96 mt-28 mb-20">
         {/* <div className="-mr-8 flex flex-row items-center justify-center">
           <div className="flex flex-row">
             {[1, 2, 3, 4, 5].map((o, i) => <div key={i} style={{ zIndex: i }} className="shadow-2xl border border-2 border-black bg-blue-300 h-6 w-6 sm:h-10 sm:w-10 rounded-full -mr-2 sm:-mr-4"></div>)}
@@ -31,7 +31,7 @@ const HomepageHero = () => {
             <div className="text-white text-[0.5rem] sm:text-xs mt-1">helped businesses worldwide</div>
           </div>
         </div> */}
-        <Text as="span" size="xs" className="flex flex-row items-center gap-2 text-white border border-blue-900 bg-blue-950 tracking-wide rounded-full px-3 py-2 shadow-xl uppercase"><RocketLaunch />GROW 10X</Text>
+        <Text as="span" size="xs" className="flex flex-row items-center gap-2 text-white border border-blue-900 bg-blue-950 tracking-wide rounded-full px-3 py-2 shadow-xl uppercase mb-4"><RocketLaunch />GROW 10X</Text>
         <Text as="h1" size="8xl" className="bg-gradient-to-r from-white from-[30%] to-neutral-300 text-transparent bg-clip-text font-black text-center uppercase tracking-tighter drop-shadow-lg">Your Partner in <br /><span className="bg-gradient-to-r from-blue-200 from-[30%] to-blue-400 text-transparent bg-clip-text">Digital Universe</span></Text>
         <Text as="p" size="md" className="text-white text-center mt-4 max-w-2xl drop-shadow-lg">We leverage AI-First strategies and cutting edge tech-stack to craft purpose-built solutions that scale your business from zero to hero.</Text>
         <div className="mt-12">

@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { GoogleTagManager } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
+import { ORIGIN } from "@/constants";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,6 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Honey Hexa - Your Partner in Digital Universe",
   description: "We leverage AI-First strategies and cutting edge tech-stack to craft purpose-built solutions that scale your business from zero to hero.",
+  metadataBase: new URL(ORIGIN),
   openGraph: {
     images: ['/og-image.png'],
   },

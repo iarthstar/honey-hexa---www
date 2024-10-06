@@ -5,7 +5,17 @@ import React from 'react'
 import Page from '@/components/templates/page';
 import { SOLUTIONS } from '@/content/shared';
 import HeroHeadline from '@/components/molecules/hero-headline';
+import { Metadata } from 'next';
+import { ORIGIN } from '@/constants';
 
+export const metadata: Metadata = {
+  title: "Solutions -- Our end-to-end offerings | Honey Hexa",
+  description: "We deliver comprehensive, custom-built solutions that cover every phase of your project, from initial concept through to final delivery and beyond.",
+  metadataBase: new URL(ORIGIN),
+  openGraph: {
+    images: ['/og-image.png'],
+  },
+};
 
 const PageSolutions = async () => {
   return (

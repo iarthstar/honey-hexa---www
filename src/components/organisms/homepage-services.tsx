@@ -37,7 +37,7 @@ const HomepageServices = () => {
       />
       <PageContainer className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {EXPERTISE_SECTORS.map((o, i) => (
-          <div key={i} className="bg-gradient-to-br from-neutral-800 via-[30%] via-black to-black bg-black border hover:border-neutral-500 border-neutral-800 h-64 rounded-[2rem] p-8 flex flex-col">
+          <div key={i} className="bg-gradient-to-br from-neutral-800 via-[30%] via-black to-black bg-black border hover:border-neutral-500 border-neutral-800 h-64 rounded-[0.66rem] p-8 flex flex-col">
             {o.icon}
             <span className="flex-grow" />
             <span className="text-lg font-semibold pb-4">{o.title}</span>

@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { PageContainer } from '@/components/misc';
 import { getArticles } from '@/sanity/sanity';
 import { FileTextIcon } from '@radix-ui/react-icons';
@@ -5,9 +6,19 @@ import Link from 'next/link';
 import React from 'react'
 import { format } from "date-fns";
 import Page from '@/components/templates/page';
+import { ORIGIN } from '@/constants';
 import HeroHeadline from '@/components/molecules/hero-headline';
 
 const formatArticleDate = (date: string) => format(new Date(date), 'MMM dd, yyyy');
+
+export const metadata: Metadata = {
+  title: "Blog -- Our Insightful Articles | Honey Hexa",
+  description: "Discover the latest in AI-driven strategies, cutting-edge technology, and innovative solutions designed to elevate your business to new heights.",
+  metadataBase: new URL(ORIGIN),
+  openGraph: {
+    images: ['/og-image.png'],
+  },
+};
 
 const PageBlog = async () => {
   const articles: any[] = await getArticles();

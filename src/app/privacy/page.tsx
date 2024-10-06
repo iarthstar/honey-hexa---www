@@ -6,6 +6,17 @@ import Link from 'next/link'
 import React from 'react'
 import Page from '@/components/templates/page'
 import { Text } from '@/components/atoms/text'
+import { Metadata } from 'next'
+import { ORIGIN } from '@/constants'
+
+export const metadata: Metadata = {
+  title: "Privacy -- Our legal policies | Honey Hexa",
+  description: "We use the information we collect to improve, personalize, and expand our services.",
+  metadataBase: new URL(ORIGIN),
+  openGraph: {
+    images: ['/og-image.png'],
+  },
+};
 
 const PagePrivacy = () => {
   return (

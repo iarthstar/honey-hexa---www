@@ -1,6 +1,7 @@
 import { Text } from '@/components/atoms/text';
 import { PageContainer } from '@/components/misc';
 import Page from '@/components/templates/page';
+import { ORIGIN } from '@/constants';
 import { getArticleFromSlug } from '@/sanity/sanity';
 import { ArrowLeftIcon } from '@radix-ui/react-icons';
 import { Metadata, ResolvingMetadata } from 'next';
@@ -12,12 +13,13 @@ export async function generateMetadata(
   { params }: any,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
- 
+
   // fetch data
   const article = await getArticleFromSlug(params.slug);
- 
+
   return {
     title: article.title,
+    metadataBase: new URL(ORIGIN),
     openGraph: {
       images: ['/og-image.png'],
     },
