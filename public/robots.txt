@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://www.honeyhexa.com
-
-# Sitemaps
-Sitemap: https://www.honeyhexa.com/sitemap.xml
