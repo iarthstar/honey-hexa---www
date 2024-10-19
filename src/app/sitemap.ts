@@ -9,7 +9,7 @@ const route = (path?: string, lastModified?: string) => ({
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const articleSlugs = (await getArticleSlugs()).map((o: any) =>
-    route(o.slug, o._updatedAt)
+    route(`blog/${o.slug}`, o._updatedAt)
   );
   return [
     route(),
