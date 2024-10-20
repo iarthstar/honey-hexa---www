@@ -16,7 +16,7 @@ export const ORGANISATION_SCHEMA = {
     {
       "@type": "ContactPoint",
       telephone: "+91-95120-54457",
-      contactType: "customer service",
+      contactType: "Chief Business Officer",
       areaServed: "IN",
       availableLanguage: ["English", "Hindi", "Gujarati"],
     },
@@ -32,80 +32,6 @@ export const ORGANISATION_SCHEMA = {
     "@type": "Person",
     name: "Honey Gajjar",
     sameAs: "https://www.linkedin.com/in/honeygajjar",
-  },
-  foundingDate: "2010-03-15",
-  foundingLocation: {
-    "@type": "Place",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "San Francisco",
-      addressRegion: "CA",
-      addressCountry: "US",
-    },
-  },
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "123 Marketing St",
-    addressLocality: "San Francisco",
-    addressRegion: "CA",
-    postalCode: "94103",
-    addressCountry: "US",
-  },
-  employee: {
-    "@type": "Person",
-    name: "John Smith",
-    jobTitle: "Chief Marketing Officer",
-    sameAs: "https://www.linkedin.com/in/johnsmith",
-  },
-  parentOrganization: {
-    "@type": "Organization",
-    name: "Global Marketing Solutions LLC",
-    url: "https://globalmarketingsolutions.com",
-  },
-  duns: "123456789",
-  taxID: "98-7654321",
-  isicV4: "7310",
-  naics: "541613",
-  award: "Best Marketing Agency 2023",
-  brand: {
-    "@type": "Brand",
-    name: "Enterprise Marketing",
-    url: "https://enterprisemarketing.com",
-  },
-  department: {
-    "@type": "Organization",
-    name: "SEO Department",
-    employee: [
-      {
-        "@type": "Person",
-        name: "Sarah Johnson",
-        jobTitle: "SEO Manager",
-        sameAs: "https://www.linkedin.com/in/sarahjohnson",
-      },
-    ],
-  },
-  numberOfEmployees: "150",
-  areaServed: "Worldwide",
-  review: [
-    {
-      "@type": "Review",
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
-      },
-      author: {
-        "@type": "Person",
-        name: "Client X",
-        sameAs: "https://www.linkedin.com/in/clientx",
-      },
-      reviewBody:
-        "Honey Hexa provided exceptional service in helping us increase our online visibility and engagement.",
-    },
-  ],
-  speakable: {
-    "@type": "SpeakableSpecification",
-    cssSelector: ["article h1", "article h2", "article p.intro"],
   },
   knowsAbout: [
     "Search Engine Optimization",
