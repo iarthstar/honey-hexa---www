@@ -184,11 +184,11 @@ export const SOLUTIONS = [
 ];
 
 export const RESOURCES = [
-  { label: "Blog", value: "blog", description: "Learn about tech." },
+  { label: "Blog", value: "/blog", description: "Learn about tech." },
   // { label: "News", value: "news", description: "Learn about our progress." },
   {
     label: "Case Studies",
-    value: "customers",
+    value: "/customers",
     description: "Learn about our work.",
   },
 ];
@@ -197,27 +197,27 @@ export const COMPANY = [
   // { label: "Careers", value: "careers", description: "Join our team." },
   {
     label: "Contact Us",
-    value: "contact",
+    value: "/contact",
     description: "Get in touch with us.",
   },
   {
     label: "Privacy Policy",
-    value: "privacy",
+    value: "/privacy",
     description: "Read our privacy policy.",
   },
   {
     label: "Terms of Service",
-    value: "terms",
+    value: "/terms",
     description: "Read our terms of service.",
   },
 ];
 
 export const NAVIGATION = [
-  { label: "Services", value: "services", variant: "list", items: [] },
-  { label: "Solutions", value: "solutions", variant: "list", items: [] },
+  { label: "Services", value: "/services", variant: "list", items: [] },
+  { label: "Solutions", value: "/solutions", variant: "list", items: [] },
   // { label: "Blog", value: "blog", variant: "list", items: [] },
-  { label: "Resources", value: "resources", variant: "list", items: RESOURCES },
-  { label: "Company", value: "company", variant: "list", items: COMPANY },
+  { label: "Resources", value: "/resources", variant: "list", items: RESOURCES },
+  { label: "Company", value: "/company", variant: "list", items: COMPANY },
 ];
 
 export const CATEGORIES = [

@@ -22,7 +22,7 @@ const renderNavigationItem = ({ variant, label, value, items }: any) => {
             {items.map((o: any) => (
               <ListItem key={o.value}
                 title={o.label}
-                href={`/${o.value}`}
+                href={`${o.value}`}
               >
                 {o.description}
               </ListItem>
@@ -36,7 +36,7 @@ const renderNavigationItem = ({ variant, label, value, items }: any) => {
       <ReactNavigationMenu.Item key={value}>
         <ReactNavigationMenu.Link
           className="text-violet11-1234 hover:bg-violet3-1234 text-white focus:shadow-violet7 block select-none rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none no-underline outline-none focus:shadow-[0_0_0_2px]"
-          href={`/${value}`}
+          href={`${value}`}
         >
           {label}
         </ReactNavigationMenu.Link>
