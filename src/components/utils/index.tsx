@@ -1,7 +1,7 @@
 import Script from "next/script";
 import * as React from "react";
 
-export const Element: React.FC<{ as: keyof React.ReactHTML } & React.HTMLAttributes<HTMLElement>> = ({
+export const Element: React.FC<{ as: any } & React.HTMLAttributes<HTMLElement>> = ({
   as,
   children,
   ...rest

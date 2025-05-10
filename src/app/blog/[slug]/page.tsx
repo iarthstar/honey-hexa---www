@@ -15,7 +15,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
 
   // fetch data
-  const article = await getArticleFromSlug(params.slug);
+  const article = await getArticleFromSlug((await (await params)?.slug));
 
   return {
     title: article.title,
@@ -26,10 +26,10 @@ export async function generateMetadata(
   }
 }
 
-const PageArticle = async ({ params }: { params: { slug: string } }) => {
+const PageArticle: React.FC<any> = async ({ params }) => {
   let article = null;
   try {
-    article = await getArticleFromSlug(params.slug);
+    article = await getArticleFromSlug((await (await params)?.slug));
   } catch (err) {
 
   }

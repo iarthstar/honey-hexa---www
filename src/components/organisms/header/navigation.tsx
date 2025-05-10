@@ -236,6 +236,8 @@ const ListItem: React.FC<any> = React.forwardRef(
             className
           )}
           {...props}
+
+          // @ts-ignore
           ref={forwardedRef}
         >
           <div className="text-violet12-1234 text-black font-semibold mb-[5px] leading-[1.2]">

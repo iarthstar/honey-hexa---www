@@ -4,6 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { GoogleTagManager } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
 import { ORIGIN } from "@/constants";
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });

@@ -2,7 +2,7 @@ import { cn } from "@/utils";
 import { Element } from "@/components/utils";
 import * as React from "react";
 
-export const PageContainer: React.FC<{ as?: keyof React.ReactHTML } & React.HTMLAttributes<HTMLElement>> = ({
+export const PageContainer: React.FC<{ as?: any } & React.HTMLAttributes<HTMLElement>> = ({
   as = "div",
   className,
   ...rest
