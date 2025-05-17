@@ -35,10 +35,10 @@ const HomepageHero = () => {
         <Text as="h1" size="8xl" className="bg-gradient-to-r from-white from-[30%] to-neutral-300 text-transparent bg-clip-text font-black text-center uppercase tracking-tighter drop-shadow-lg">Your Partner in <br /><span className="bg-gradient-to-r from-blue-200 from-[30%] to-blue-400 text-transparent bg-clip-text">Digital Universe</span></Text>
         <Text as="p" size="md" className="text-white text-center mt-4 max-w-2xl drop-shadow-lg">We leverage AI-First strategies and cutting edge tech-stack to craft purpose-built solutions that scale your business from zero to hero.</Text>
         <div className="mt-12">
-          <Link href="/contact" className="drop-shadow-lg bg-white text-blue-900 px-4 py-2 rounded-full text-regular font-semibold flex flex-row items-center">Book Now &nbsp; <PhoneArrowUpRight /></Link>
+          <Link href="/contact" className="animate-bounce drop-shadow-lg border border-white hover:border-blue-500 bg-white hover:bg-blue-900 hover:text-white text-blue-900 px-8 py-4 rounded-full text-regular font-semibold flex flex-row items-center">Get Your Free Consultation Now &nbsp; <PhoneArrowUpRight /></Link>
         </div>
       </PageContainer>
-      <Marquee items={marqueeItems} view={(o: any) => <div className="text-white drop-shadow-lg uppercase text-3xl font-bold tracking-tighter px-24 py-12">{o.label}</div>} />
+      <Marquee items={marqueeItems} view={(o: any) => <div className="text-white drop-shadow-lg uppercase text-2xl font-bold tracking-tighter px-24 py-12">{o.label}</div>} />
     </div>
   )
 }
