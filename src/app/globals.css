@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-marquee: marquee 60s linear infinite;
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% - 2.5rem));
+    }
+  }
+}
+
+body {
+  @apply bg-black;
+}
