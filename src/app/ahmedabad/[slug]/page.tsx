@@ -51,6 +51,9 @@ export async function generateMetadata(
     title: `Best ${service} for ${area} - Ahmedabad Businesses`,
     description: `As ${area}'s premier ${service} provider, we understand the unique needs of our community. Our team delivers AI-Native ${service} for businesses in ${area} ahmedabad.`,
     metadataBase: new URL(ORIGIN),
+    alternates: {
+      canonical: `${ORIGIN}/ahmedabad/${(await (await params)?.slug)}`
+    },
     openGraph: {
       images: ["/og-image.png"],
     },

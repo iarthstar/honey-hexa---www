@@ -20,6 +20,9 @@ export async function generateMetadata(
   return {
     title: article.title,
     metadataBase: new URL(ORIGIN),
+    alternates: {
+      canonical: `${ORIGIN}/blog/${(await (await params)?.slug)}`
+    },
     openGraph: {
       images: ['/og-image.png'],
     },
