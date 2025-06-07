@@ -5,7 +5,7 @@ import Footer from '@/components/organisms/footer'
 import { StructuredData } from '@/components/utils'
 import { LOCALBUSINESS_SCHEMA, ORGANISATION_SCHEMA, WEBPAGE_SCHEMA } from '@/content/schemas'
 
-const Page: React.FC<React.PropsWithChildren<{ showCTA?: boolean }>> = ({ children, showCTA = true }) => {
+const Page: React.FC<React.PropsWithChildren<{ showCTA?: boolean, headerProps?: any }>> = ({ children, showCTA = true, headerProps }) => {
   return (
     <>
       {/* Schema Markups */}
@@ -13,7 +13,7 @@ const Page: React.FC<React.PropsWithChildren<{ showCTA?: boolean }>> = ({ childr
       <StructuredData jsonld={WEBPAGE_SCHEMA} />
       <StructuredData jsonld={LOCALBUSINESS_SCHEMA} />
 
-      <Header />
+      <Header {...headerProps} />
 
       {/* Main Content */}
       <main>
