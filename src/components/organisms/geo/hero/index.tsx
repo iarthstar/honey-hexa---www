@@ -54,14 +54,14 @@ const GeoHero = ({
           size="md"
           className="text-white text-center mt-4 max-w-3xl drop-shadow-lg"
         >
-          Serving {VARIABLES.CITY} business owners since 1997 <br />
+          Digitalizing {VARIABLES.CITY} business owners since 1997 <br />
         </Text>
         <Text
           as="p"
           size="md"
           className="flex flex-row items-center text-white text-center mt-2 max-w-3xl drop-shadow-lg"
         >
-          500+&nbsp;
+          450+&nbsp;
           <span className="flex flex-row *:text-yellow-500 *:drop-shadow-lg">
             <StarFilledIcon />
             <StarFilledIcon />

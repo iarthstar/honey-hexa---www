@@ -50,16 +50,6 @@ const HomepageSolutions = () => {
         ))}
 
       </PageContainer>
-      {/* <PageContainer className="pb-32">
-        <video
-          className="pointer-events-none aspect-4/3 h-full w-full object-cover object-top"
-          src="https://v.bentogrids.com/clsyjr8fn0002mrg3q5igeryf.mp4"
-          preload="auto"
-          autoPlay
-          loop
-          muted
-        />
-      </PageContainer> */}
     </div>
   )
 }

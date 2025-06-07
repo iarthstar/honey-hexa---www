@@ -3,9 +3,10 @@ import GeoServices from "@/components/organisms/geo/services";
 import GeoSolutions from "@/components/organisms/geo/solutions";
 import GeoHero from "@/components/organisms/geo/hero";
 import { notFound } from "next/navigation";
-import { AREAS, SERVICES } from "@/content/shared";
 import { ORIGIN } from "@/constants";
 import { Metadata, ResolvingMetadata } from "next";
+import { getServiceAndArea } from "@/utils/geo";
+import FAQs from "@/components/organisms/faqs";
 
 const DEFAULT_METADATA = {
   title: "Honey Hexa - Your Partner in Digital Universe",
@@ -21,38 +22,16 @@ export async function generateMetadata(
   { params }: any,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  let service = null;
-  let area = null;
   const slug = (await params)?.slug;
 
-  const regex = new RegExp(/^(\w+)-(\w+)-experts-(\w+)-ahmedabad$/);
-
-  if (!regex.test(slug)) {
-    return DEFAULT_METADATA;
-  }
-
-  const executed = regex.exec(slug);
-
-  if (executed === null) {
-    return DEFAULT_METADATA;
-  } else {
-    const [_slug, group1, group2, group3] = executed;
-    service = SERVICES.find(
-      (o) => o.value == `${group1}-${group2}`.toLowerCase()
-    )?.label;
-    area = AREAS[`${group3}`.toLowerCase()];
-  }
-
-  if (!service || !area) {
-    return DEFAULT_METADATA;
-  }
+  const { service, area } = getServiceAndArea(slug, () => DEFAULT_METADATA);
 
   return {
     title: `Best ${service} for ${area} - Ahmedabad Businesses`,
-    description: `As ${area}'s premier ${service} provider, we understand the unique needs of our community. Our team delivers AI-Native ${service} for businesses in ${area} ahmedabad.`,
+    description: `We are ${area}'s top ${service} provider, our team delivers AI-First ${service} for your business in ${area} ahmedabad.`,
     metadataBase: new URL(ORIGIN),
     alternates: {
-      canonical: `${ORIGIN}/ahmedabad/${(await (await params)?.slug)}`
+      canonical: `${ORIGIN}/ahmedabad/${(await params)?.slug}`,
     },
     openGraph: {
       images: ["/og-image.png"],
@@ -60,38 +39,39 @@ export async function generateMetadata(
   };
 }
 
+const makeItems = (service: string, area: string) => ([
+  {
+    "q": `How does AI help my ${area} business grow?`,
+    "a": `Boosts local sales with demand prediction, hyper-targeted ads, and ${area}-specific SEO content.`
+  },
+  {
+    "q": `Why choose AI-Native Platforms over generic tools for ${service}?`,
+    "a": `Trained on local data: understands your ${area}'s context, trends, and competitors.`
+  },
+  {
+    "q": `Is AI hard for non-tech ${area} business owners?`,
+    "a": `No-code setup for hyper-local ${area} businesses. Launch in 72 hours, no IT skills needed.`,
+  },
+  {
+    "q": `Can you guarantee AI ROI for ${service}?`,
+    "a": `90-day growth guarantee: ~20%+ improvements in workflows or free ${service} extension.`
+  },
+  {
+    "q": `How do you protect our ${area} customers' data?`,
+    "a": `AI-Safety with Indian data processing, automatic PII redaction, and DPDP Act compliance for ${area} businesses.`
+  }
+]);
+
 const GeoCityAreaSericePage: React.FC<any> = async ({ params }) => {
-  let service = null;
-  let area = null;
   const slug = (await params)?.slug;
-
-  const regex = new RegExp(/^(\w+)-(\w+)-experts-(\w+)-ahmedabad$/);
-
-  if (!regex.test(slug)) {
-    notFound();
-  }
-
-  const executed = regex.exec(slug);
-
-  if (executed === null) {
-    notFound();
-  } else {
-    const [_slug, group1, group2, group3] = executed;
-    service = SERVICES.find(
-      (o) => o.value == `${group1}-${group2}`.toLowerCase()
-    )?.label;
-    area = AREAS[`${group3}`.toLowerCase()];
-  }
-
-  if (!service || !area) {
-    notFound();
-  }
+  const { service, area } = getServiceAndArea(slug, () => notFound());
 
   return (
     <Page headerProps={{ hideNavigation: true }}>
       <GeoHero service={service} area={area} />
       <GeoServices service={service} area={area} />
       <GeoSolutions service={service} area={area} />
+      <FAQs items={makeItems(service, area)} />
     </Page>
   );
 };

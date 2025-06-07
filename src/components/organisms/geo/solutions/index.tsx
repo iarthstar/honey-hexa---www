@@ -30,7 +30,7 @@ const EXPERTISE_SECTORS = [
 
 const GeoSolutions = ({ service = "", area = ""}) => {
   return (
-    <div className="bg-gradient-to-b from-neutral-900 to-black flex flex-col items-center bg-black text-white pt-32">
+    <div className="bg-gradient-to-b from-neutral-900 to-black flex flex-col items-center bg-black text-white py-32">
       <Headline
         className=""
         label={area}

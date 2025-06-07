@@ -72,7 +72,7 @@ export const SERVICES = [
     category: "Development",
   },
   {
-    label: "E-commerce Dev",
+    label: "E-commerce Development",
     href: "/contact",
     value: "ecommerce-dev",
     category: "Development",
@@ -93,6 +93,12 @@ export const SERVICES = [
     label: "Performance Analytics",
     href: "/contact",
     value: "performance-analytics",
+    category: "Growth",
+  },
+  {
+    label: "Social Media Management",
+    href: "/contact",
+    value: "social-media-management",
     category: "Growth",
   },
 ];
